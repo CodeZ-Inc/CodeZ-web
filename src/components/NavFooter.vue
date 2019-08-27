@@ -9,13 +9,14 @@
     >
       <v-btn
         v-for="link in links"
-        :key="link"
+        :key="link.text"
         color="primary"
         text
         rounded
         class="my-2"
+        :href="link.path"
       >
-        {{ link }}
+        {{ link.text }}
       </v-btn>
       <v-col
         class="white py-4 text-center primary--text"
@@ -33,16 +34,32 @@ export default {
   data () {
     return {
       links: [
-        'CodeZ',
-        'Products',
-        'About Us',
-        'Contact Us'
+        {
+          text: 'CodeZ',
+          path: '/'
+        },
+        {
+          text: 'Our Products',
+          path: '#products'
+        },
+        {
+          text: 'About Us',
+          path: '#about'
+        },
+        {
+          text: 'Contact Us',
+          path: '#contact'
+        }
       ]
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.v-btn {
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
 
 </style>

@@ -13,7 +13,7 @@
       text
       rounded
       class="my-2"
-      :to="link.path"
+      :href="link.path"
     >
       {{ link.text }}
     </v-btn>
@@ -28,15 +28,15 @@ export default {
       links: [
         {
           text: 'Our Products',
-          path: '/products'
+          path: '#products'
         },
         {
           text: 'About Us',
-          path: '/about'
+          path: '#about'
         },
         {
           text: 'Contact Us',
-          path: '/contact'
+          path: '#contact'
         }
       ]
     }
