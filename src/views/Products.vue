@@ -1,12 +1,15 @@
 <template>
   <v-container>
-    <h1>This is Home page...</h1>
+    <h2>This is Products page...</h2>
   </v-container>
 </template>
 
 <script>
-
 export default {
-  name: 'Home'
+  name: 'Products'
 }
 </script>
+
+<style scoped>
+
+</style>
