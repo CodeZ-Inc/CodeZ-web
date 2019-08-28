@@ -1,8 +1,8 @@
 <template>
   <v-app-bar app class="elevation-0">
     <v-toolbar-title class="headline primary--text">
-      <router-link to="/">
-        <span>CodeZ</span>
+      <router-link :to="{name: 'home'}">
+        <span @click="setActiveLink('')">CodeZ</span>
       </router-link>
     </v-toolbar-title>
     <v-spacer></v-spacer>
@@ -14,8 +14,9 @@
       rounded
       class="my-2"
       :href="link.path"
+      @click="setActiveLink(link.path)"
     >
-      {{ link.text }}
+      <span :class="{'font-weight-bold': isActiveLink === link.path}">{{ link.text }}</span>
     </v-btn>
   </v-app-bar>
 </template>
@@ -25,6 +26,7 @@ export default {
   name: 'NavHeader',
   data () {
     return {
+      activeLink: undefined,
       links: [
         {
           text: 'Our Products',
@@ -43,6 +45,23 @@ export default {
           path: '#contact'
         }
       ]
+    }
+  },
+  computed: {
+    isActiveLink () {
+      return this.activeLink === undefined ? this.$router.currentRoute.hash : this.activeLink
+    }
+  },
+  methods: {
+    setActiveLink (link) {
+      this.activeLink = link
+      if (link === '') {
+        this.scrollToTop()
+      }
+    },
+    scrollToTop () {
+      document.body.scrollTop = 0 // For Safari
+      document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
     }
   }
 }
