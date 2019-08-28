@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-container id="home" class="black white--text px-3">
+    <v-container id="home" class="black white--text py-10">
       <v-row align="center">
-        <v-col cols="7" class="bg-img">
+        <v-col cols="12" sm="12" md="7" class="bg-img">
         </v-col>
-        <v-col cols="4" class="ml-4">
+        <v-col>
           <p>Welcome to CodeZ. We are an AI first data
             solutions engine to meet all your needs for the
             data driven future.
@@ -14,15 +14,10 @@
         </v-col>
       </v-row>
     </v-container>
-    <div id="products">
-      <products/>
-    </div>
-    <div id="about">
-      <about/>
-    </div>
-    <div id="contact">
-      <contact/>
-    </div>
+    <products id="products" class="py-10"/>
+    <about id="about"  class="py-10"/>
+    <team id="team"  class="py-10"/>
+    <contact id="contact"  class="py-10"/>
   </div>
 </template>
 
@@ -30,13 +25,15 @@
 import Products from '@/views/Products'
 import About from '@/views/About'
 import Contact from '@/views/Contact'
+import Team from '@/views/Team'
 
 export default {
   name: 'Home',
   components: {
     Products,
     About,
-    Contact
+    Contact,
+    Team
   }
 }
 </script>

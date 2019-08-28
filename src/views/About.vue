@@ -1,7 +1,9 @@
 <template>
-  <v-container class="black white--text px-3">
+  <v-container class="black white--text">
     <v-row align="center">
-      <v-col cols="5" class="">
+      <v-col cols="12" sm="12" md="7" class="bg-img">
+      </v-col>
+      <v-col>
         <h3>About Us
         </h3>
         <p></p>
@@ -10,21 +12,14 @@
           Code Z Inc is a registered Delaware C Corp organization in the US.
         </p>
       </v-col>
-      <v-col cols="7" class="bg-img">
-      </v-col>
     </v-row>
-    <team/>
   </v-container>
 </template>
 
 <script>
-import Team from '@/views/Team'
 
 export default {
-  name: 'About',
-  components: {
-    Team
-  }
+  name: 'About'
 }
 
 </script>

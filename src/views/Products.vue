@@ -1,20 +1,19 @@
 <template>
   <v-container class="black white--text px-3">
-    <v-row no-gutters align="center">
-      <v-col cols="5" class="">
+    <v-row align="center">
+      <v-col cols="12"  sm="12" md="5">
         <h3>Data Genie</h3>
         <p></p>
         <p>Data Genie enables enterprises to maximize the value of their
           data assets</p>
       </v-col>
-      <v-col cols="7" class="bg-img">
+      <v-col class="bg-img">
       </v-col>
     </v-row>
     <v-divider class="accent my-3"/>
     <v-row>
-      <v-col cols="xs12 md3">
-        <v-card
-          color="#385F73">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
           <v-card-text class="white--text">
             <div class="headline mb-2">Data Catalog</div>
             The data catalog crawls the entire data infrastructure and all the data store logs to capture data access
@@ -22,9 +21,8 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="xs12 md3">
-        <v-card
-          color="#959595">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
           <v-card-text class="white--text">
             <div class="headline mb-2">Data Intelligence</div>
             Machine Learning, Dictionary & Regex based data classification that enables semantic tagging of enterprise
@@ -32,9 +30,8 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="xs12 md3">
-        <v-card
-          color="#385F73">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
           <v-card-text class="white--text">
             <div class="headline mb-2">Data Quality</div>
             Data Signature is assigned for each dataset that specifies the Schema, Cardinality, Statistical Attributes,
@@ -43,9 +40,8 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="xs12 md3">
-        <v-card
-          color="#385F73">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
           <v-card-text class="white--text">
             <div class="headline mb-2">Data Lineage</div>
             The unsupervised algorithm based on temporal clustering, data signature correlation & heuristics enables
@@ -53,9 +49,8 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="xs12 md3">
-        <v-card
-          color="#385F73">
+      <v-col cols="12" sm="6" md="3">
+        <v-card>
           <v-card-text class="white--text">
             <div class="headline mb-2">Data Guidance</div>
             Using intelligence from underlying services, Data Genie delivers services at Data Scientist and Enterprise

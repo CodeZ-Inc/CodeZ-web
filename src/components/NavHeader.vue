@@ -31,6 +31,10 @@ export default {
           path: '#products'
         },
         {
+          text: 'Team',
+          path: '#team'
+        },
+        {
           text: 'About Us',
           path: '#about'
         },

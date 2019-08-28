@@ -1,9 +1,7 @@
 <template>
-  <v-container id="home" class="black white--text px-3">
+  <v-container id="home" class="black white--text">
     <v-row align="center">
-      <v-col cols="7" class="bg-img">
-      </v-col>
-      <v-col cols="4" class="ml-4">
+      <v-col cols="12" sm="12" md="5">
         <h3>Our Team</h3>
         <p>
           Development is powered by 8 experts spanning areas of product management, big data software architecture, data
@@ -16,6 +14,8 @@
           team is dist ributed across USA & India, along
           with an advisor and a Business manager based out of Europe.
         </p>
+      </v-col>
+       <v-col class="bg-img">
       </v-col>
     </v-row>
   </v-container>

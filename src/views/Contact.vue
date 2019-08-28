@@ -1,22 +1,7 @@
 <template>
-  <v-container class="black white--text px-3">
+  <v-container class="black white--text">
     <v-row align="center">
-      <v-col cols="5" class="text-sm-center">
-        <h3>
-          CodeZ
-          xyz 65
-        </h3>
-        <h3>
-          12345, ZZZ
-        </h3>
-        <h2>
-          USA
-        </h2>
-        <h3>
-          +00 11 700 400 011
-        </h3>
-      </v-col>
-      <v-col cols="7">
+      <v-col cols="12" sm="12" md="7">
         <v-form @submit.prevent="submit" class="form-contact">
           <v-text-field
             v-model="name"
@@ -48,6 +33,23 @@
           ></v-textarea>
           <v-btn class="my-5" @click="submit" color="primary" width="200">Send</v-btn>
         </v-form>
+      </v-col>
+      <v-col>
+        <h3>
+          CodeZ
+          xyz 65
+        </h3>
+        <h3>
+          12345, ZZZ
+        </h3>
+        <h2>
+          USA
+        </h2>
+        <br/>
+        <br/>
+        <h3>
+          +00 11 700 400 011
+        </h3>
       </v-col>
     </v-row>
   </v-container>

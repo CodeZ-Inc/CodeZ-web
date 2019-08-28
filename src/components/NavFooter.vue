@@ -36,11 +36,15 @@ export default {
       links: [
         {
           text: 'CodeZ',
-          path: '/'
+          path: '#home'
         },
         {
           text: 'Our Products',
           path: '#products'
+        },
+        {
+          text: 'Team',
+          path: '#team'
         },
         {
           text: 'About Us',
