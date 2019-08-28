@@ -4,20 +4,15 @@
       <v-row align="center">
         <v-col cols="12" sm="12" md="7" class="bg-img">
         </v-col>
-        <v-col>
-          <p>Welcome to CodeZ. We are an AI first data
-            solutions engine to meet all your needs for the
-            data driven future.
-          </p>
-          <p>Check out our products here.</p>
-          <p>Contact us for more information.</p>
+        <v-col v-if="fields">
+          <p v-for="(content, index) in fields.content1" :key="index">{{content.text}}</p>
         </v-col>
       </v-row>
     </v-container>
     <products id="products" class="py-10"/>
-    <about id="about"  class="py-10"/>
-    <team id="team"  class="py-10"/>
-    <contact id="contact"  class="py-10"/>
+    <about id="about" class="py-10"/>
+    <team id="team" class="py-10"/>
+    <contact id="contact" class="py-10"/>
   </div>
 </template>
 
@@ -34,6 +29,25 @@ export default {
     About,
     Contact,
     Team
+  },
+  data () {
+    return {
+      fields: null
+    }
+  },
+  methods: {
+    getContent () {
+      this.$prismic.client.getSingle('home')
+        .then((document) => {
+          this.fields = document.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+  },
+  created () {
+    this.getContent()
   }
 }
 </script>
