@@ -1,5 +1,5 @@
 <template>
-  <v-container class="black white--text">
+  <v-container v-if="fields" class="black white--text">
     <v-row align="center">
       <v-col cols="12" sm="12" md="7">
         <v-form @submit.prevent="submit" class="form-contact">
@@ -35,20 +35,8 @@
         </v-form>
       </v-col>
       <v-col>
-        <h3>
-          CodeZ
-          xyz 65
-        </h3>
-        <h3>
-          12345, ZZZ
-        </h3>
-        <h2>
-          USA
-        </h2>
-        <br/>
-        <br/>
-        <h3>
-          +00 11 700 400 011
+        <h3 v-for="(line, index) in fields.address" :key="index">
+          {{line.text}}
         </h3>
       </v-col>
     </v-row>
@@ -70,6 +58,7 @@ export default {
 
   data () {
     return {
+      fields: null,
       name: '',
       email: '',
       message: ''
@@ -107,7 +96,19 @@ export default {
       this.$v.$reset()
       this.name = ''
       this.email = ''
+    },
+    getContent () {
+      this.$prismic.client.getSingle('contact')
+        .then((document) => {
+          this.fields = document.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
+  },
+  created () {
+    this.getContent()
   }
 }
 </script>

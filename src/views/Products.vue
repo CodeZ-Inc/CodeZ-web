@@ -1,22 +1,21 @@
 <template>
-  <v-container class="black white--text px-3">
+  <v-container v-if="fields" class="black white--text px-3">
     <v-row align="center">
       <v-col cols="12" sm="12" md="5">
-        <h3>Data Genie</h3>
+        <h3>{{fields.title_product1[0].text}}</h3>
         <p></p>
-        <p>Data Genie enables enterprises to maximize the value of their
-          data assets</p>
+        <p>{{fields.content_product1[0].text}}</p>
       </v-col>
       <v-col class="bg-img">
       </v-col>
     </v-row>
     <v-divider class="accent my-3"/>
     <v-row>
-      <v-col v-for="feature in features" :key="feature.title" cols="12" sm="6" md="3">
+      <v-col v-for="(feature, index) in fields.feature_cards" :key="index" cols="12" sm="6" md="3">
         <v-card>
           <v-card-text class="white--text">
-            <div class="headline mb-2">{{feature.title}}</div>
-            {{feature.content}}
+            <div class="headline mb-2">{{feature.card_title[0].text}}</div>
+            {{feature.card_content[0].text}}
           </v-card-text>
         </v-card>
       </v-col>
@@ -29,35 +28,22 @@ export default {
   name: 'Products',
   data () {
     return {
-      features: [
-        {
-          title: 'Data Catalog',
-          content: 'The data catalog crawls the entire data infrastructure and all the data store logs to capture data access\n' +
-            '            patterns. It generates required core meta data for the other services.'
-        },
-        {
-          title: 'Data Intelligence',
-          content: 'Machine Learning, Dictionary & Regex based data classification that enables semantic tagging of enterprise\n' +
-            '            datasets to domain specific logical data models.'
-        },
-        {
-          title: 'Data Quality',
-          content: 'Data Signature is assigned for each dataset that specifies the Schema, Cardinality, Statistical Attributes,\n' +
-            '            Noise, Freshness , Completeness, Consistency enabling anomaly\n' +
-            '            detection and timely identification of data quality issues at source.'
-        },
-        {
-          title: 'Data Lineage',
-          content: 'The unsupervised algorithm based on temporal clustering, data signature correlation & heuristics enables\n' +
-            '            understanding of sto rage & processing redundancy.'
-        },
-        {
-          title: 'Data Guidance',
-          content: 'Using intelligence from underlying services, Data Genie delivers services at Data Scientist and Enterprise\n' +
-            '            level.'
-        }
-      ]
+      fields: null
     }
+  },
+  methods: {
+    getContent () {
+      this.$prismic.client.getSingle('products')
+        .then((document) => {
+          this.fields = document.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+  },
+  created () {
+    this.getContent()
   }
 }
 </script>

@@ -36,6 +36,10 @@ export default {
     }
   },
   methods: {
+    // TODO (RAVI): Vuex for site navigation
+    // TODO (RAVI): Refactor css and prismic architecture
+    // TODO (RAVI): Add mixins and variables
+    // TODO (RAVI): Responsive images
     getContent () {
       this.$prismic.client.getSingle('home')
         .then((document) => {

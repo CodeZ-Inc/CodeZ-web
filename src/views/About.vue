@@ -1,15 +1,13 @@
 <template>
-  <v-container class="black white--text">
+  <v-container v-if="fields" class="black white--text">
     <v-row align="center">
       <v-col cols="12" sm="12" md="7" class="bg-img">
       </v-col>
       <v-col>
-        <h3>About Us
-        </h3>
+        <h3>{{fields.title_content1[0].text}}</h3>
         <p></p>
-        <p>Stealth mode start up powered by a highly experienced and able team </p>
-        <p>
-          Code Z Inc is a registered Delaware C Corp organization in the US.
+        <p v-for="(content, index) in fields.content1" :key="index">
+          {{content.text}}
         </p>
       </v-col>
     </v-row>
@@ -19,7 +17,26 @@
 <script>
 
 export default {
-  name: 'About'
+  name: 'About',
+  data () {
+    return {
+      fields: null
+    }
+  },
+  methods: {
+    getContent () {
+      this.$prismic.client.getSingle('about')
+        .then((document) => {
+          this.fields = document.data
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+  },
+  created () {
+    this.getContent()
+  }
 }
 
 </script>
