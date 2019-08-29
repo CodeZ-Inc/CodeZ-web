@@ -2,7 +2,7 @@
   <v-app-bar app class="elevation-0">
     <v-toolbar-title class="headline primary--text">
       <router-link :to="{name: 'home'}">
-        <span @click="setActiveLink('')">CodeZ</span>
+        <span @click="setActive('')">CodeZ</span>
       </router-link>
     </v-toolbar-title>
     <v-spacer></v-spacer>
@@ -14,7 +14,7 @@
       rounded
       class="my-2"
       :href="link.path"
-      @click="setActiveLink(link.path)"
+      @click="setActive(link.path)"
     >
       <span :class="{'font-weight-bold': isActiveLink === link.path}">{{ link.text }}</span>
     </v-btn>
@@ -22,11 +22,12 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'NavHeader',
   data () {
     return {
-      activeLink: undefined,
       links: [
         {
           text: 'Our Products',
@@ -48,13 +49,15 @@ export default {
     }
   },
   computed: {
+    ...mapState(['activeLink']),
     isActiveLink () {
       return this.activeLink === undefined ? this.$router.currentRoute.hash : this.activeLink
     }
   },
   methods: {
-    setActiveLink (link) {
-      this.activeLink = link
+    ...mapActions(['setActiveLink']),
+    setActive (link) {
+      this.setActiveLink(link)
       if (link === '') {
         this.scrollToTop()
       }
@@ -79,7 +82,8 @@ a {
 
 .v-btn {
   text-transform: capitalize;
-  letter-spacing: normal;
+  letter-spacing: 0.8px;
+  font-weight: normal !important;
 }
 
 .v-btn--active {

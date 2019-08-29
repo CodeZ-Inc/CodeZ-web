@@ -15,6 +15,7 @@
         rounded
         class="my-2"
         :href="link.path"
+        @click="setActiveLink(link.path)"
       >
         {{ link.text }}
       </v-btn>
@@ -29,6 +30,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'NavFooter',
   data () {
@@ -36,7 +39,7 @@ export default {
       links: [
         {
           text: 'CodeZ',
-          path: '#home'
+          path: '/'
         },
         {
           text: 'Our Products',
@@ -56,6 +59,9 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    ...mapActions(['setActiveLink'])
   }
 }
 </script>
@@ -63,7 +69,8 @@ export default {
 <style scoped lang="scss">
 .v-btn {
   text-transform: capitalize;
-  letter-spacing: normal;
+  letter-spacing: 0.8px;
+  font-weight: normal !important;
 }
 
 </style>

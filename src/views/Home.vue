@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container id="home" class="black white--text py-10">
+    <v-container class="black white--text py-10">
       <v-row align="center">
         <v-col cols="12" sm="12" md="7" class="bg-img">
         </v-col>
