@@ -1,0 +1,46 @@
+/* global mixins */
+
+/* font mixins */
+
+@mixin fontSmooth() {
+  font-smooth: never;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin fb($size) {
+  font: $size "Barlow", Arial, sans-serif;
+  font-weight: normal;
+  @include fontSmooth
+}
+
+@mixin fbm($size) {
+  font: $size "Barlow", Arial, sans-serif;
+  font-weight: 500;
+  @include fontSmooth
+}
+
+@mixin fbb($size) {
+  font: $size "Barlow", Arial, sans-serif;
+  font-weight: bold;
+  @include fontSmooth
+}
+
+@mixin fq($size) {
+  font: $size "Nunito", Arial, sans-serif !important;
+  font-weight: normal;
+  @include fontSmooth
+}
+
+@mixin fqm($size) {
+  font: $size "Nunito", Arial, sans-serif !important;
+  font-weight: 600;
+  @include fontSmooth
+}
+
+@mixin fqb($size) {
+  font: $size "Nunito", Arial, sans-serif !important;
+  font-weight: bold;
+  @include fontSmooth
+}
+

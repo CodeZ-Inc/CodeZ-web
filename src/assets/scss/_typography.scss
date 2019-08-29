@@ -1,0 +1,154 @@
+.heading-1 {
+  font-size: 68px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: $primary;
+}
+
+.heading-2 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: $primary;
+}
+
+.heading-3 {
+  font-size: 36px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: $primary;
+}
+
+.heading-4 {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  font-weight: normal;
+  color: $primary;
+}
+
+.heading-7 {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.heading-5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.heading-6 {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.body1 {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.subtitle-1 {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  color: $primary;
+}
+
+.label-2 {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  color: $primary;
+}
+
+.body2,
+.v-btn {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: $primary;
+}
+
+.subtitle-2 {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  color: $primary;
+}
+
+.label__filter {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.39px;
+  color: $primary;
+}
+
+.label--small,
+.overline {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: #97a5b4;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.38px;
+  color: $primary;
+}
+
+.label__helper {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.33px;
+  color: $primary;
+}
+
+.disabled--text,
+.subdued--text {
+  color: $light;
+}

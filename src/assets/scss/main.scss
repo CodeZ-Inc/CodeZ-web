@@ -1,0 +1,9 @@
+@import "variables";
+@import 'mixins';
+@import "typography";
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500|Nunito:400,500,600,700');
+
+body {
+  font-family: $barlow;
+}
