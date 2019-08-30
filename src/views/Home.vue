@@ -6,6 +6,8 @@
         </v-col>
         <v-col v-if="fields">
           <p v-for="(content, index) in fields.content1" :key="index">{{content.text}}</p>
+          <p>Checkout our products <a href="#products">here</a>.</p>
+          <p><a href="#contact">Contact Us </a> for more information.</p>
         </v-col>
       </v-row>
     </v-container>
