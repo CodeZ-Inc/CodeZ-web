@@ -91,6 +91,10 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
+      this.email = 'contact@codez.ai'
+      setTimeout(() => {
+        window.open(`mailto:${this.email}?subject=${this.name}&body=${this.message}`)
+      }, 320)
     },
     clear () {
       this.$v.$reset()
