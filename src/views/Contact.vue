@@ -1,7 +1,7 @@
 <template>
   <v-container v-if="fields" class="black white--text">
     <v-row align="center">
-      <v-col cols="12" sm="12" md="7">
+      <v-col cols="12" sm="12" md="7" class="mr-10">
         <v-form @submit.prevent="submit" class="form-contact">
           <v-text-field
             v-model="name"
@@ -31,7 +31,7 @@
             label="Message"
             rows="6"
           ></v-textarea>
-          <v-btn class="my-5" @click="submit" color="primary" width="200">Send</v-btn>
+          <v-btn class="my-10" @click="submit" color="primary" width="200" height="50">Send</v-btn>
         </v-form>
       </v-col>
       <v-col>
@@ -118,12 +118,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.bg-img {
-  height: 420px;
-  background: black url("../assets/images/bgContact.jpg") no-repeat;
-  background-size: 100% 100%;
-}
-
 .form-contact {
   .input-contact {
     background: #3C3B3F; /* fallback for old browsers */

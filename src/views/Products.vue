@@ -2,15 +2,14 @@
   <v-container v-if="fields" class="black white--text px-3">
     <v-row align="center">
       <v-col cols="12" sm="12" md="5">
-        <h3>{{fields.title_product1[0].text}}</h3>
-        <p></p>
-        <p>{{fields.content_product1[0].text}}</p>
+        <h3 class="heading-3">{{fields.title_product1[0].text}}</h3>
+        <p class="mt-5">{{fields.content_product1[0].text}}</p>
       </v-col>
-      <v-col class="bg-img">
+      <v-col class="bg-img my-5 ml-10">
       </v-col>
     </v-row>
     <v-divider class="accent my-3"/>
-    <v-row>
+    <v-row class="my-5">
       <v-col v-for="(feature, index) in fields.feature_cards" :key="index" cols="12" sm="6" md="3">
         <v-card>
           <v-card-text class="white--text">
@@ -53,6 +52,9 @@ export default {
   height: 420px;
   background: black url("../assets/images/bgProduct.jpg") no-repeat;
   background-size: 100% 100%;
+  @media (max-width: $mobile_width) {
+    height: 225px;
+  }
 }
 
 .v-card {
