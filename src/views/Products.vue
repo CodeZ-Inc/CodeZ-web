@@ -1,11 +1,11 @@
 <template>
   <v-container v-if="fields" class="black white--text px-3">
     <v-row align="center">
-      <v-col cols="12" sm="12" md="5">
+      <v-col cols="12" sm="12" md="5" class="pr-10">
         <h3 class="heading-3">{{fields.title_product1[0].text}}</h3>
         <p class="mt-5">{{fields.content_product1[0].text}}</p>
       </v-col>
-      <v-col class="bg-img my-5 ml-10">
+      <v-col class="bg-img my-5">
       </v-col>
     </v-row>
     <v-divider class="accent my-3"/>
