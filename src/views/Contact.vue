@@ -1,12 +1,12 @@
 <template>
-  <v-container v-if="fields" class="black white--text">
+  <v-container v-if="fields" class="white">
     <v-row align="center">
       <v-col cols="12" sm="12" md="7" class="mr-10">
         <v-form @submit.prevent="submit" class="form-contact">
           <v-text-field
             v-model="name"
             color="deep-purple"
-            class="input-contact"
+            filled
             :error-messages="nameErrors"
             label="Full Name"
             required
@@ -15,7 +15,7 @@
           ></v-text-field>
           <v-text-field
             v-model="email"
-            class="input-contact"
+            filled
             color="deep-purple"
             :error-messages="emailErrors"
             label="E-mail"
@@ -25,7 +25,7 @@
           ></v-text-field>
           <v-textarea
             v-model="message"
-            class="input-contact"
+            filled
             auto-grow
             color="deep-purple"
             label="Message"
@@ -118,13 +118,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.form-contact {
-  .input-contact {
-    background: #3C3B3F; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  }
-}
-
 </style>
