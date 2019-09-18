@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Parallax from './views/Para'
+// import Foundary from './views/foundary'
 
 Vue.use(Router)
 
@@ -11,9 +12,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'foundary',
+      component: Parallax
     },
+    {
+      path: '/para',
+      name: 'para',
+      component: Parallax
+    },
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   component: Home
+    // },
     {
       path: '/products',
       name: 'products',

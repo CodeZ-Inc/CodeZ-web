@@ -1,31 +1,52 @@
 <template>
   <v-footer
-    color="white"
+    color=""
     padless
+    class="theme--dark"
   >
-    <v-row
-      justify="center"
-      no-gutters
-    >
-      <v-btn
-        v-for="link in links"
-        :key="link.text"
-        color="primary"
-        text
-        rounded
-        class="my-2"
-        :href="link.path"
-        @click="setActiveLink(link.path)"
-      >
-        {{ link.text }}
-      </v-btn>
-      <v-col
-        class="white py-4 text-center primary--text"
-        cols="12"
-      >
-        {{ new Date().getFullYear() }} — <strong>CodeZ</strong>
-      </v-col>
-    </v-row>
+    <!--    <v-row-->
+    <!--      justify="center"-->
+    <!--      no-gutters-->
+    <!--    >-->
+    <!--      <v-btn-->
+    <!--        v-for="link in links"-->
+    <!--        :key="link.text"-->
+    <!--        color="primary"-->
+    <!--        text-->
+    <!--        rounded-->
+    <!--        class="my-2"-->
+    <!--        :href="link.path"-->
+    <!--        @click="setActiveLink(link.path)"-->
+    <!--      >-->
+    <!--        {{ link.text }}-->
+    <!--      </v-btn>-->
+    <!--      <v-col-->
+    <!--        class="white py-4 text-center primary&#45;&#45;text"-->
+    <!--        cols="12"-->
+    <!--      >-->
+    <!--        {{ new Date().getFullYear() }} — <strong>CodeZ</strong>-->
+    <!--      </v-col>-->
+    <!--    </v-row>-->
+    <v-container>
+      <v-row>
+        <v-col cols="6" sm="8" md="6" class="offset-sm-2 text-sm-center offset-md-3">
+          <a href="#">
+            <!--            <img alt="Logo" class="image-xs mb32 fade-on-hover" src="img/logo-light.png"/>-->
+            <h2 class="display-2 mb-5">Codez</h2>
+          </a>
+          <h5 class="mb-5">Handcrafted by Codez &copy; {{ new Date().getFullYear() }}
+            <br/> Built with Variant Page Builder</h5>
+          <div>
+            <v-icon>mdi-twitter</v-icon>
+            <v-icon>mdi-facebook</v-icon>
+            <v-icon>mdi-dribbble</v-icon>
+            <v-icon>mdi-vimeo</v-icon>
+          </div>
+        </v-col>
+      </v-row>
+      <!--end of row-->
+    </v-container>
+    <!--end of container-->
   </v-footer>
 </template>
 
@@ -67,6 +88,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.v-footer {
+  padding: 72px 0;
+
+  .v-icon {
+    margin-right: 1rem;
+    color: white;
+    opacity: 0.75;
+  }
+
+  h2, h5 {
+    color: white;
+    opacity: 0.75;
+    letter-spacing: 1px !important;
+  }
+
+  h2 {
+    letter-spacing: 8px !important;
+  }
+}
+
 .v-btn {
   text-transform: capitalize;
   letter-spacing: 0.8px;
