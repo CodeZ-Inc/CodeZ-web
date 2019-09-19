@@ -1,34 +1,34 @@
 <template>
-  <v-container class="testimonial">
-    <v-row>
-      <v-col cols="6" class="offset-md-3 text-sm-center">
-        <h3 class="mb-6 mb-sm-4">Some amazing companies we've had the pleasure to work with.</h3>
-        <v-carousel
-          v-model="model"
-          :show-arrows="false"
-          :cycle="true"
-          :hide-delimiter-background="true"
-          progress-color="success"
-          height="320"
+  <v-container class="testimonial pt-10">
+    <v-row justify="center" align="center" class="px-5 text-center">
+      <!--      <v-col cols="6" class="offset-md-3 text-sm-center">-->
+      <h3 class="mb-6 mb-sm-4">Some amazing companies we've had the pleasure to work with.</h3>
+      <v-carousel
+        v-model="model"
+        :show-arrows="false"
+        :cycle="true"
+        :hide-delimiter-background="true"
+        progress-color="success"
+        height="385"
+      >
+        <v-carousel-item
+          v-for="(item, index) in items"
+          :key="index"
         >
-          <v-carousel-item
-            v-for="(item, index) in items"
-            :key="index"
+          <v-row class="text-center"
+                 align="center"
+                 justify="center"
           >
-            <v-row class="py-10"
-                   align="center"
-                   justify="center"
-            >
-              <h5 class="mb-5 text-wrap">{{item.text}}</h5>
-              <div class="quote-author">
-                <img alt="Author" class="image-xs mb16" :src="require(`@/assets/images/${item.avatar}`)"/>
-                <h6 class="uppercase mb-1">{{item.name}}</h6>
-                <span>{{item.title}}</span>
-              </div>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
+            <h5 class="mb-5 px-5">{{item.text}}</h5>
+          </v-row>
+          <div class="text-center div-avatar">
+            <img alt="Author" class="image-xs mb16" :src="require(`@/assets/images/${item.avatar}`)"/>
+            <h6 class="uppercase mb-1">{{item.name}}</h6>
+            <span>{{item.title}}</span>
+          </div>
+        </v-carousel-item>
+      </v-carousel>
+      <!--      </v-col>-->
     </v-row>
   </v-container>
 </template>
@@ -76,6 +76,19 @@ export default {
 
 <style scoped lang="scss">
 .testimonial {
-  width: 1200px;
+  @media (max-width: 1250px) {
+    /*width: 1200px;*/
+  }
+
+  .div-avatar {
+    display: block;
+  }
+
+  .v-carousel {
+    height: 350px;
+    @media (max-width: $mobile_width) {
+      height: 370px;
+    }
+  }
 }
 </style>

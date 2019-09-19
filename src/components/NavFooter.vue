@@ -27,25 +27,26 @@
     <!--        {{ new Date().getFullYear() }} — <strong>CodeZ</strong>-->
     <!--      </v-col>-->
     <!--    </v-row>-->
-    <v-container>
-      <v-row>
-        <v-col cols="6" sm="8" md="6" class="offset-sm-2 text-sm-center offset-md-3">
-          <a href="#">
-            <!--            <img alt="Logo" class="image-xs mb32 fade-on-hover" src="img/logo-light.png"/>-->
-            <h2 class="display-2 mb-5">Codez</h2>
-          </a>
-          <h5 class="mb-5">Handcrafted by Codez &copy; {{ new Date().getFullYear() }}
-            <br/> Built with Variant Page Builder</h5>
-          <div>
-            <v-icon>mdi-twitter</v-icon>
-            <v-icon>mdi-facebook</v-icon>
-            <v-icon>mdi-dribbble</v-icon>
-            <v-icon>mdi-vimeo</v-icon>
-          </div>
-        </v-col>
-      </v-row>
-      <!--end of row-->
-    </v-container>
+    <!--    <v-container>-->
+    <v-row align="center" justify="center" class="text-center">
+      <v-col>
+        <!--      <v-col cols="6" sm="8" md="6" class="offset-sm-2 text-sm-center offset-md-3">-->
+        <a href="/">
+          <!--            <img alt="Logo" class="image-xs mb32 fade-on-hover" src="img/logo-light.png"/>-->
+          <h2 class="display-2 mb-5">Codez</h2>
+        </a>
+        <h5 class="mb-5">Handcrafted by Codez &copy; {{ new Date().getFullYear() }}
+          <br/> Built with Variant Page Builder</h5>
+        <div>
+          <v-icon>mdi-twitter</v-icon>
+          <v-icon>mdi-facebook</v-icon>
+          <v-icon>mdi-dribbble</v-icon>
+          <v-icon>mdi-vimeo</v-icon>
+        </div>
+      </v-col>
+    </v-row>
+    <!--end of row-->
+    <!--    </v-container>-->
     <!--end of container-->
   </v-footer>
 </template>

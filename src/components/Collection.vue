@@ -2,7 +2,7 @@
   <section class="portfolio-pullup">
     <v-container class="container-collection">
       <v-row no-gutters class="pb-0">
-        <v-col cols="4">
+        <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-1.jpg"/>
@@ -13,7 +13,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-2.jpg"/>
@@ -24,7 +24,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-3.jpg"/>
@@ -35,7 +35,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-4.jpg"/>
@@ -46,7 +46,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="4" class="move-up">
+        <v-col cols="12" sm="12" md="4" class="move-up">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-5.jpg"/>
@@ -57,7 +57,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/project-single-6.jpg"/>
@@ -84,15 +84,18 @@ export default {
 <style scoped lang="scss">
 
 .container-collection {
+  /*visibility: hidden;*/
   @media (min-width: 1200px) {
     width: 1170px;
+  }
+  @media (max-width: $mobile_width) {
   }
 }
 
 .move-up {
   margin-top: -318px;
-  @media (min-width: 1200px) {
-
+  @media (max-width: $mobile_width) {
+    margin-top: 0px;
   }
 }
 
