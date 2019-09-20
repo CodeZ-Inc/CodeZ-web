@@ -1,7 +1,6 @@
 <template>
-  <v-container class="testimonial pt-10">
+  <v-container class="testimonial pt-10" style="max-width: 700px;">
     <v-row justify="center" align="center" class="px-5 text-center">
-      <!--      <v-col cols="6" class="offset-md-3 text-sm-center">-->
       <h3 class="mb-6 mb-sm-4">Some amazing companies we've had the pleasure to work with.</h3>
       <v-carousel
         v-model="model"
@@ -28,7 +27,6 @@
           </div>
         </v-carousel-item>
       </v-carousel>
-      <!--      </v-col>-->
     </v-row>
   </v-container>
 </template>
