@@ -18,13 +18,19 @@
 </template>
 
 <script>
+// import Fnav from '@/components/Fnav'
 import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'NavHeader',
+  components: {
+    // Fnav
+  },
   data () {
     return {
       title: 'CodeZ',
+      drawer: false,
+      group: null,
       links: [
         {
           text: 'Our Products',
@@ -63,10 +69,18 @@ export default {
       document.body.scrollTop = 0 // For Safari
       document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
     }
+  },
+  watch: {
+    group () {
+      this.drawer = false
+    }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.mobile-menu {
+  visibility: hidden;
+}
 
 </style>
