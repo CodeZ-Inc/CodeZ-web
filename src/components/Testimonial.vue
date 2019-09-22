@@ -59,19 +59,19 @@ export default {
         },
         {
           text: 'Data Signature is assigned for each dataset that specifies the Schema, Cardinality, Statistical Attributes, Noise, Freshness , Completeness, Consistency enabling anomaly detection and timely identification of data quality issues at source.',
-          avatar: 'avatar4.png',
+          avatar: 'avatar1.png',
           name: 'Data Quality',
           title: 'Vault'
         },
         {
           text: 'The unsupervised algorithm based on temporal clustering, data signature correlation & heuristics enables understanding of sto rage & processing redundancy.',
-          avatar: 'avatar3.png',
+          avatar: 'avatar2.png',
           name: 'Data Lineage',
           title: 'Aviary Bar'
         },
         {
           text: 'Using intelligence from underlying services, Data Genie delivers services at Data Scientist and Enterprise level.',
-          avatar: 'avatar6.png',
+          avatar: 'avatar5.png',
           name: 'Data Guidance',
           title: 'Vault'
         }
