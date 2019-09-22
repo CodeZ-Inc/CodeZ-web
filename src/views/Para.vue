@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import NavHeader from '@/components/NavHeader'
 import Parallax from '@/components/parallax'
 import Collection from '@/components/Collection'
 import Testimonial from '@/components/Testimonial'
@@ -18,7 +17,6 @@ import NavFooter from '@/components/NavFooter'
 export default {
   name: 'Para',
   components: {
-    NavHeader,
     Parallax,
     Collection,
     Testimonial,

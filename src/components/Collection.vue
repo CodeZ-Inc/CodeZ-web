@@ -5,7 +5,7 @@
         <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-1.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-1.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -16,7 +16,7 @@
         <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-2.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-2.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -27,7 +27,7 @@
         <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-3.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-3.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -38,7 +38,7 @@
         <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-4.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-4.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -49,7 +49,7 @@
         <v-col cols="12" sm="12" md="4" class="move-up">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-5.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-5.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -60,7 +60,7 @@
         <v-col cols="12" sm="12" md="4">
           <div class="image-tile inner-title hover-reveal text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/project-single-6.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-6.jpg"/>
               <div class="title">
                 <h5 class="uppercase mb0">Happy Couple</h5>
                 <span>People / Life</span>
@@ -93,7 +93,8 @@ export default {
 }
 
 .move-up {
-  margin-top: -318px;
+  // margin-top: -318px;
+  margin-top: 0px;
   @media (max-width: $mobile_width) {
     margin-top: 0px;
   }
@@ -117,12 +118,14 @@ section + .portfolio-pullup {
 /*!---------- 22. IMAGE TILES ----------*/
 img {
   max-width: 100%;
+  height: 100%;
 }
 
 .image-tile {
   overflow: hidden;
   position: relative;
   margin-bottom: -5px;
+  height: 250px;
 }
 
 .image-tile img {
