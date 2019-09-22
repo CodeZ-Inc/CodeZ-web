@@ -19,7 +19,7 @@
               color=""
               dark
               large
-              href="/pre-made-themes"
+              @click="contact"
             >
               Make an enquiry
             </v-btn>
@@ -38,6 +38,14 @@ export default {
   data () {
     return {
       title: 'Your Logo'
+    }
+  },
+  methods: {
+    contact () {
+      this.email = 'hello@codez.ai'
+      setTimeout(() => {
+        window.open(`mailto:${this.email}`)
+      }, 320)
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
-  <v-container class="testimonial pt-10" style="max-width: 700px;">
+  <v-container class="testimonial pt-10" style="max-width: 700px;" id="products">
     <v-row justify="center" align="center" class="px-5 text-center">
-      <h3 class="mb-6 mb-sm-4">Some amazing companies we've had the pleasure to work with.</h3>
+      <h3 class="mb-6 mb-sm-4">Some amazing products and services we are offering.</h3>
       <v-carousel
         v-model="model"
         :show-arrows="false"
@@ -18,6 +18,7 @@
                  align="center"
                  justify="center"
           >
+            <h3 class="headline">{{item.name}}</h3>
             <h5 class="mb-5 px-5">{{item.text}}</h5>
           </v-row>
           <div class="text-center div-avatar">
@@ -39,24 +40,39 @@ export default {
       model: 0,
       items: [
         {
-          text: 'The guys at Foundry were an absolute pleasure to work with - they took on our project with the same\n' +
-            '                enthusiasm and passion as us.',
+          text: 'Data Genie enables enterprises to maximize the value of their data assets.',
           avatar: 'avatar4.png',
-          name: 'Anna Thompson',
+          name: 'Data Genie',
           title: 'Vault'
         },
         {
-          text: 'We\'ve worked with Foundry on our web presence over the past 8 years and always relish the opportunity\n' +
-            '                to work alongside them.',
+          text: 'The data catalog crawls the entire data infrastructure and all the data store logs to capture data access patterns. It generates required core meta data for the other services.',
           avatar: 'avatar3.png',
-          name: 'Carl Vance',
+          name: 'Data Catalog',
           title: 'Aviary Bar'
         },
         {
-          text: 'There is only once choice when it comes to our marketing collateral, Foundry always deliver inspiring\n' +
-            '                work on-time and budget.',
+          text: 'Machine Learning, Dictionary & Regex based data classification that enables semantic tagging of enterprise datasets to domain specific logical data models.',
           avatar: 'avatar6.png',
-          name: 'Natasha Canter',
+          name: 'Data Intelligence',
+          title: 'Vault'
+        },
+        {
+          text: 'Data Signature is assigned for each dataset that specifies the Schema, Cardinality, Statistical Attributes, Noise, Freshness , Completeness, Consistency enabling anomaly detection and timely identification of data quality issues at source.',
+          avatar: 'avatar4.png',
+          name: 'Data Quality',
+          title: 'Vault'
+        },
+        {
+          text: 'The unsupervised algorithm based on temporal clustering, data signature correlation & heuristics enables understanding of sto rage & processing redundancy.',
+          avatar: 'avatar3.png',
+          name: 'Data Lineage',
+          title: 'Aviary Bar'
+        },
+        {
+          text: 'Using intelligence from underlying services, Data Genie delivers services at Data Scientist and Enterprise level.',
+          avatar: 'avatar6.png',
+          name: 'Data Guidance',
           title: 'Vault'
         }
       ],

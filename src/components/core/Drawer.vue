@@ -12,7 +12,6 @@
         v-for="(link, i) in links"
         :key="i"
         :to="link.to"
-        :href="link.href"
         @click="onClick($event, link)"
       >
         <v-list-item-title v-text="link.text"/>
