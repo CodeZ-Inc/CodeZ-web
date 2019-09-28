@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!--    <nav-header/>-->
     <parallax/>
     <collection class="mb-12"/>
     <testimonial class="mb-12"/>

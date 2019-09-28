@@ -3,9 +3,9 @@
     <v-container class="container-collection">
       <v-row no-gutters class="pb-0">
         <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile image-story inner-title text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-1.jpg"/>
+              <img alt="Pic" src="../assets/images/collection-single-1-story.jpg"/>
               <!--              <div class="title">-->
               <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
               <!--                <span>Process / Data</span>-->
@@ -14,57 +14,37 @@
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile inner-title text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-2.jpg"/>
-              <!--              <div class="title">-->
-              <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
-              <!--                <span>Process / Data</span>-->
-              <!--              </div>-->
+              <img alt="Pic" src="../assets/images/collection-single-5.jpg"/>
             </a>
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile image-story inner-title text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-3.jpg"/>
-              <!--              <div class="title">-->
-              <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
-              <!--                <span>Process / Data</span>-->
-              <!--              </div>-->
+              <img alt="Pic" src="../assets/images/collection-single-3-story.jpg"/>
             </a>
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile inner-title text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/collection-single-4.jpg"/>
-              <div class="title">
-                <h5 class="uppercase mb0">CodeZ</h5>
-                <span>Process / Data</span>
-              </div>
             </a>
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="4" class="move-up">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile image-story inner-title text-center">
             <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-5.jpg"/>
-              <!--              <div class="title">-->
-              <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
-              <!--                <span>Process / Data</span>-->
-              <!--              </div>-->
+              <img alt="Pic" src="../assets/images/collection-single-2-story.jpg"/>
             </a>
           </div>
         </v-col>
         <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-titletext-center">
+          <div class="image-tile inner-title text-center">
             <a href="#">
               <img alt="Pic" src="../assets/images/collection-single-6.jpg"/>
-              <!--              <div class="title">-->
-              <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
-              <!--                <span>Process / Data</span>-->
-              <!--              </div>-->
             </a>
           </div>
         </v-col>
@@ -93,8 +73,7 @@ export default {
 }
 
 .move-up {
-  // margin-top: -318px;
-  margin-top: 0px;
+  margin-top: -300px;
   @media (max-width: $mobile_width) {
     margin-top: 0px;
   }
@@ -126,6 +105,10 @@ img {
   position: relative;
   margin-bottom: -5px;
   height: 250px;
+}
+
+.image-story {
+  height: 550px !important;
 }
 
 .image-tile img {
