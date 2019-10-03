@@ -4,39 +4,13 @@
     padless
     class="theme--dark"
   >
-    <!--    <v-row-->
-    <!--      justify="center"-->
-    <!--      no-gutters-->
-    <!--    >-->
-    <!--      <v-btn-->
-    <!--        v-for="link in links"-->
-    <!--        :key="link.text"-->
-    <!--        color="primary"-->
-    <!--        text-->
-    <!--        rounded-->
-    <!--        class="my-2"-->
-    <!--        :href="link.path"-->
-    <!--        @click="setActiveLink(link.path)"-->
-    <!--      >-->
-    <!--        {{ link.text }}-->
-    <!--      </v-btn>-->
-    <!--      <v-col-->
-    <!--        class="white py-4 text-center primary&#45;&#45;text"-->
-    <!--        cols="12"-->
-    <!--      >-->
-    <!--        {{ new Date().getFullYear() }} — <strong>CodeZ</strong>-->
-    <!--      </v-col>-->
-    <!--    </v-row>-->
-    <!--    <v-container>-->
     <v-row align="center" justify="center" class="text-center">
       <v-col>
-        <!--      <v-col cols="6" sm="8" md="6" class="offset-sm-2 text-sm-center offset-md-3">-->
         <a href="/">
-          <!--            <img alt="Logo" class="image-xs mb32 fade-on-hover" src="img/logo-light.png"/>-->
           <h2 class="display-2 mb-5">Codez</h2>
         </a>
-        <h5 class="mb-5">Handcrafted by Codez &copy; {{ new Date().getFullYear() }}
-          <br/> Built with Variant Page Builder</h5>
+        <h5 class="mb-5">An AI first data solutions engine to meet all <br/> your needs for the data driven future
+          &copy;{{new Date().getFullYear() }}</h5>
         <div>
           <v-icon>mdi-twitter</v-icon>
           <v-icon>mdi-facebook</v-icon>
@@ -45,9 +19,6 @@
         </div>
       </v-col>
     </v-row>
-    <!--end of row-->
-    <!--    </v-container>-->
-    <!--end of container-->
   </v-footer>
 </template>
 
