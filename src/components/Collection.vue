@@ -2,51 +2,111 @@
   <section class="portfolio-pullup">
     <v-container class="container-collection">
       <v-row no-gutters class="pb-0">
-        <v-col cols="12" sm="12" md="4">
-          <div class="image-tile image-story inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-1-story.jpg"/>
-              <!--              <div class="title">-->
-              <!--                <h5 class="uppercase mb0">CodeZ</h5>-->
-              <!--                <span>Process / Data</span>-->
-              <!--              </div>-->
-            </a>
-          </div>
+        <v-col cols="12" sm="12" md="6">
+          <v-card
+            class="mx-auto"
+           :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="400px"
+              src="../assets/images/collection-single-7-m.jpg"
+            >
+              <v-card-title class="align-end fill-height">
+                <span>
+                  <span class="uppercase">Data Guidance:</span>
+                  <p class="body-1 mb-0">
+                    At data scientist and enterprise level.
+                </p>
+                </span>
+              </v-card-title>
+            </v-img>
+          </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-5.jpg"/>
-            </a>
-          </div>
+        <v-col cols="12" sm="12" md="6">
+          <v-card
+            class="mx-auto"
+            :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="400px"
+              src="../assets/images/collection-single-8-m.jpg"
+            >
+              <v-card-title class="align-end fill-height">
+                <span>
+                  <span class="uppercase">Data Quality:</span>
+                  <p class="body-1 mb-0">
+                  Data Signature for each dataset enabling anomaly detection and timely
+                  identification of data quality issues at source.
+                </p>
+                </span>
+              </v-card-title>
+            </v-img>
+          </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="4">
-          <div class="image-tile image-story inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-3-story.jpg"/>
-            </a>
-          </div>
+        <v-col cols="12" sm="12" md="8">
+          <v-card
+            class="mx-auto"
+           :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="450px"
+              src="../assets/images/collection-single-4.jpg"
+            >
+              <v-card-title class="align-end fill-height">
+                <span>
+                  <span class="uppercase">Data Catalog:</span>
+                  <p class="body-1 mb-0">
+                    Captures data access patterns and generates required core meta data for the other services.
+                </p>
+                </span>
+              </v-card-title>
+            </v-img>
+          </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-4.jpg"/>
-            </a>
-          </div>
+        <v-col cols="12" sm="12" md="4" class="">
+          <v-card
+            class="mx-auto"
+           :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="450px"
+              src="../assets/images/collection-single-2.jpg"
+            >
+              <v-card-title class="align-end fill-height">
+                 <span>
+                  <span class="uppercase">Data Intelligence: </span>
+                  <p class="body-1 mb-0">
+                    Machine Learning, Dictionary & Regex based data classification.
+                </p>
+                </span>
+              </v-card-title>
+            </v-img>
+          </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="4" class="move-up">
-          <div class="image-tile image-story inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-2-story.jpg"/>
-            </a>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="12" md="4">
-          <div class="image-tile inner-title text-center">
-            <a href="#">
-              <img alt="Pic" src="../assets/images/collection-single-6.jpg"/>
-            </a>
-          </div>
+        <v-col cols="12" sm="12" md="12">
+          <v-card
+            class="mx-auto"
+           :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="500px"
+              src="../assets/images/collection-single-6.jpg"
+            >
+              <v-card-title class="align-end fill-height">
+                <span>
+                  <span class="uppercase">Data Lineage:</span>
+                  <p class="body-1 mb-0">
+                    Enables understanding of storage & processing redundancy.
+                </p>
+                </span>
+              </v-card-title>
+            </v-img>
+          </v-card>
         </v-col>
       </v-row>
       <!--end of row-->
@@ -104,11 +164,11 @@ img {
   overflow: hidden;
   position: relative;
   margin-bottom: -5px;
-  height: 250px;
+  height: 400px;
 }
 
 .image-story {
-  height: 550px !important;
+  /*height: 550px !important;*/
 }
 
 .image-tile img {
