@@ -1,31 +1,47 @@
 <template>
   <v-container class="testimonial pt-10" style="max-width: 700px;" id="products">
     <v-row justify="center" align="center" class="px-5 text-center">
-      <h3 class="mb-6 mb-sm-4">Some amazing products and services we are offering.</h3>
+      <h3 class="mb-6 mb-sm-4 headline">Some amazing products and services we are offering</h3>
       <v-carousel
         v-model="model"
         :show-arrows="false"
         :cycle="true"
         :hide-delimiter-background="true"
-        progress-color="success"
-        height="385"
+        progress-color="black"
+        class="my-5"
       >
         <v-carousel-item
           v-for="(item, index) in items"
           :key="index"
         >
-          <v-row class="text-center"
-                 align="center"
-                 justify="center"
+          <v-card
+            class="mx-auto"
+            max-width="374"
           >
-            <h3 class="headline">{{item.name}}</h3>
-            <h5 class="mb-5 px-5">{{item.text}}</h5>
-          </v-row>
-          <div class="text-center div-avatar">
-            <img alt="Author" class="image-xs mb16" :src="require(`@/assets/images/${item.avatar}`)"/>
-            <h6 class="uppercase mb-1">{{item.name}}</h6>
-            <span>{{item.title}}</span>
-          </div>
+            <v-img
+              :src="require(`@/assets/images/${item.avatar}`)"
+              height="200px"
+            ></v-img>
+
+            <v-card-title>
+              <div>{{item.name}}</div>
+            </v-card-title>
+            <v-card-text class="text-left body-1">{{item.text}}
+            </v-card-text>
+          </v-card>
+          <!--          <v-row class="text-center"-->
+          <!--                 align="center"-->
+          <!--                 justify="center"-->
+          <!--          >-->
+          <!--            <h3 class="headline">{{item.name}}</h3>-->
+          <!--            <h5 class="mb-5 px-5">{{item.text}}</h5>-->
+
+          <!--            <div class="text-center div-avatar">-->
+          <!--              <img alt="Author" class="mt-5" :src="require(`@/assets/images/${item.avatar}`)"/>-->
+          <!--              &lt;!&ndash;            <h6 class="uppercase mb-1">{{item.name}}</h6>&ndash;&gt;-->
+          <!--              &lt;!&ndash;            <span>{{item.title}}</span>&ndash;&gt;-->
+          <!--            </div>-->
+          <!--          </v-row>-->
         </v-carousel-item>
       </v-carousel>
     </v-row>
@@ -40,48 +56,36 @@ export default {
       model: 0,
       items: [
         {
-          text: 'Data Genie enables enterprises to maximize the value of their data assets.',
-          avatar: 'avatar4.png',
-          name: 'Data Genie',
-          title: 'Vault'
+          text: 'Using our patent pending algorithm for \'Data Signature based intrinsic data tracking\' ' +
+            'we can provide valuable and very specific insights like reason for change in table rows, ' +
+            'breaking change in table schemas, exact percentage of change in table values etc.',
+          avatar: 'slider-1.jpg',
+          name: 'Data Reliability and Dependability',
+          title: ''
         },
         {
-          text: 'The data catalog crawls the entire data infrastructure and all the data store logs to capture data access patterns. It generates required core meta data for the other services.',
-          avatar: 'avatar3.png',
-          name: 'Data Catalog',
+          text: 'Machine learning models need to be retrained or their hyper parameters need to be tuned' +
+            ' based on the new training data - when to re-train a ML model is a big issue in ML operationalization.' +
+            ' We provide intrinsic insights that can be used to trigger re-training of downstream ML models.',
+          avatar: 'slider-2.png',
+          name: 'Retraining of Machine Learning models',
           title: 'Aviary Bar'
         },
         {
-          text: 'Machine Learning, Dictionary & Regex based data classification that enables semantic tagging of enterprise datasets to domain specific logical data models.',
-          avatar: 'avatar6.png',
-          name: 'Data Intelligence',
+          text: 'We also support rule driven notification based on data quality factors. It would be possible' +
+            ' to configure very specific need based rules for any required dataset.',
+          avatar: 'slider-3.png',
+          name: 'Rules driven Notification',
           title: 'Vault'
         },
         {
-          text: 'Data Signature is assigned for each dataset that specifies the Schema, Cardinality, Statistical Attributes, Noise, Freshness , Completeness, Consistency enabling anomaly detection and timely identification of data quality issues at source.',
-          avatar: 'avatar1.png',
-          name: 'Data Quality',
-          title: 'Vault'
-        },
-        {
-          text: 'The unsupervised algorithm based on temporal clustering, data signature correlation & heuristics enables understanding of sto rage & processing redundancy.',
-          avatar: 'avatar2.png',
-          name: 'Data Lineage',
-          title: 'Aviary Bar'
-        },
-        {
-          text: 'Using intelligence from underlying services, Data Genie delivers services at Data Scientist and Enterprise level.',
-          avatar: 'avatar5.png',
-          name: 'Data Guidance',
+          text: 'Using our patent pending algorithm for \'Unsupervised lineage detection in heterogeneous' +
+            ' enterprise data infrastructure\',  we can identify multi-level data lineage in the enterprise' +
+            ' data infrastructure. And track attributes at the root level.',
+          avatar: 'slider-4.png',
+          name: 'Lineage Detection',
           title: 'Vault'
         }
-      ],
-      colors: [
-        'primary',
-        'secondary',
-        'yellow darken-2',
-        'red',
-        'orange'
       ]
     }
   }
@@ -91,11 +95,12 @@ export default {
 <style scoped lang="scss">
 .testimonial {
   @media (max-width: 1250px) {
-    /*width: 1200px;*/
   }
 
   .div-avatar {
     display: block;
+    height: 100%;
+    width: 200px;
   }
 
   .v-carousel {

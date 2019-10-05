@@ -9,8 +9,9 @@
       >
         <v-container style="max-width: 700px;">
           <v-row justify="center" align="center" class="text-center">
-            <img src="../assets/images/logo-dark.png" alt="Vuetify.js" class="img-responsive1">
-            <h3 class="black--text mb-2 text-center mt-5" style=";">Welcome to CodeZ. We are an AI first data solutions
+            <h2 class="display-4 font-weight-regular">CODE Z</h2>
+            <!--            <img src="../assets/images/logo-dark-0.1.png" alt="Vuetify.js" class="img-responsive1">-->
+            <h3 class="headline black--text text-center">Welcome to Code Z. We are an AI first data solutions
               engine to
               meet all your needs for the data driven future.</h3>
             <br/>
@@ -58,20 +59,6 @@ export default {
   @media (max-width: $mobile_width) {
     width: 100%;
   }
-}
-
-.btn-white,
-.image-bg .btn,
-.image-bg .btn:visited {
-  color: #fff;
-  border-color: #fff;
-}
-
-.btn-white:hover,
-.image-bg .btn:hover,
-.image-bg .btn:visited:hover {
-  background: #fff;
-  color: #222;
 }
 
 </style>

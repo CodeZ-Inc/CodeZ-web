@@ -7,7 +7,7 @@
     <v-row align="center" justify="center" class="text-center">
       <v-col>
         <a href="/">
-          <h2 class="display-2 mb-5">Codez</h2>
+          <h2 class="display-2 mb-5">Code Z</h2>
         </a>
         <h5 class="mb-5">An AI first data solutions engine to meet all <br/> your needs for the data driven future
           &copy;{{new Date().getFullYear() }}</h5>
@@ -31,7 +31,7 @@ export default {
     return {
       links: [
         {
-          text: 'CodeZ',
+          text: 'Code Z',
           path: '/'
         },
         {

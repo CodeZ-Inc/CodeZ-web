@@ -8,7 +8,7 @@
             :tile="true"
           >
             <v-img
-              class="white--text"
+              class="white--text img-collection"
               height="400px"
               src="../assets/images/collection-single-7-m.jpg"
             >
@@ -56,7 +56,7 @@
           >
             <v-img
               class="white--text"
-              height="420px"
+              height="375px"
               src="../assets/images/collection-single-4.jpg"
             >
               <v-card-title class="align-end fill-height pb-0 px-0">
@@ -79,7 +79,7 @@
           >
             <v-img
               class="white--text"
-              height="420px"
+              height="375px"
               src="../assets/images/collection-single-2.jpg"
             >
               <v-card-title class="align-end fill-height pb-0 px-0">
@@ -102,7 +102,7 @@
           >
             <v-img
               class="white--text"
-              height="500px"
+              height="530px"
               src="../assets/images/collection-single-6.jpg"
             >
               <v-card-title class="align-end fill-height pb-0 px-0">
@@ -146,6 +146,13 @@ export default {
     width: 1170px;
   }
   @media (max-width: $mobile_width) {
+    padding: 0px;
+  }
+
+  .img-collection {
+    @media (max-width: $mobile_width) {
+      height: 200px;
+    }
   }
 }
 

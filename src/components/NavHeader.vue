@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      title: 'CodeZ',
+      title: 'Code Z',
       drawer: false,
       group: null,
       links: [

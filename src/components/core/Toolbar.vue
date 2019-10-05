@@ -42,7 +42,7 @@ import {
 export default {
   data () {
     return {
-      title: 'CodeZ'
+      title: 'Code Z'
     }
   },
   computed: {
