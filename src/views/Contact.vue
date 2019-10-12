@@ -1,46 +1,55 @@
 <template>
-  <v-container v-if="fields" class="white">
-    <v-row align="center">
-      <v-col cols="12" sm="12" md="7" class="mr-10">
-        <v-form @submit.prevent="submit" class="form-contact">
-          <v-text-field
-            v-model="name"
-            color="deep-purple"
-            filled
-            :error-messages="nameErrors"
-            label="Full Name"
-            required
-            @input="$v.name.$touch()"
-            @blur="$v.name.$touch()"
-          ></v-text-field>
-          <v-text-field
-            v-model="email"
-            filled
-            color="deep-purple"
-            :error-messages="emailErrors"
-            label="E-mail"
-            required
-            @input="$v.email.$touch()"
-            @blur="$v.email.$touch()"
-          ></v-text-field>
-          <v-textarea
-            v-model="message"
-            filled
-            auto-grow
-            color="deep-purple"
-            label="Message"
-            rows="6"
-          ></v-textarea>
-          <v-btn class="my-10" @click="submit" color="primary" width="200" height="50">Send</v-btn>
-        </v-form>
-      </v-col>
-      <v-col>
-        <h3 v-for="(line, index) in fields.address" :key="index">
-          {{line.text}}
-        </h3>
-      </v-col>
-    </v-row>
-  </v-container>
+    <section>
+      <v-parallax src="../assets/images/bg-product.png" height="800">
+        <v-layout
+          column
+          align-center
+          justify-center
+          class="black--text"
+        >
+          <v-container v-if="fields" class="">
+            <v-row align="center">
+              <v-col cols="12" sm="12" md="7" class="mr-10">
+                <v-form @submit.prevent="submit" class="form-contact white">
+                  <v-text-field
+                    v-model="name"
+                    color="deep-purple"
+                    class="mb-10"
+                    :error-messages="nameErrors"
+                    label="Full Name"
+                    required
+                    @input="$v.name.$touch()"
+                    @blur="$v.name.$touch()"
+                  ></v-text-field>
+                  <v-text-field
+                    v-model="email"
+                    color="deep-purple"
+                    :error-messages="emailErrors"
+                    label="E-mail"
+                    required
+                    @input="$v.email.$touch()"
+                    @blur="$v.email.$touch()"
+                  ></v-text-field>
+                  <v-textarea
+                    v-model="message"
+                    auto-grow
+                    color="deep-purple"
+                    label="Message"
+                    rows="6"
+                  ></v-textarea>
+                  <v-btn class="my-10" @click="submit" color="secondary" width="200" height="50">Send</v-btn>
+                </v-form>
+              </v-col>
+              <v-col>
+                <h3 v-for="(line, index) in fields.address" :key="index">
+                  {{line.text}}
+                </h3>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-layout>
+      </v-parallax>
+    </section>
 </template>
 
 <script>

@@ -10,19 +10,19 @@ const store = new Vuex.Store({
     links: [
       {
         text: 'Is This You?',
-        path: '#products'
+        path: 'home'
       },
       {
         text: 'Data Genie',
-        path: '#data-genie'
+        path: 'dataGenie'
       },
-      {
-        text: 'Consulting',
-        path: '#consulting'
-      },
+      // {
+      //   text: 'Consulting',
+      //   path: 'home'
+      // },
       {
         text: 'Contact Us',
-        path: '#contact'
+        path: 'contact'
       }
     ]
   },

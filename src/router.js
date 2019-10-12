@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Parallax from './views/Para'
+import DataGenie from './views/DataGenie'
 // import Foundary from './views/foundary'
 
 Vue.use(Router)
@@ -11,9 +12,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'foundary',
-      component: Parallax
+      path: '/data-genie',
+      name: 'dataGenie',
+      component: DataGenie
     },
     {
       path: '/',

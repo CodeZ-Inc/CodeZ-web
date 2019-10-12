@@ -9,7 +9,7 @@
     <v-btn
       v-for="(link, i) in links"
       :key="i"
-      :to="link.to"
+      :to="{name: link.path}"
       class="ml-0 hidden-sm-and-down nav-btn black--text"
       text
       @click="onClick($event, item)"
