@@ -1,47 +1,45 @@
 <template>
   <v-container class="testimonial pt-10" style="max-width: 700px;" id="products">
     <v-row justify="center" align="center" class="px-5 text-center">
-      <h3 class="mb-6 mb-sm-4 headline">Some amazing products and services we are offering</h3>
       <v-carousel
         v-model="model"
         :show-arrows="false"
         :cycle="true"
-        :hide-delimiter-background="true"
+        class="secondary py-3"
         progress-color="black"
-        class="my-5"
+        height="650"
       >
+        <div class="display-1 text-capitalize white--text">
+          Code z unique
+          advantages</div>
         <v-carousel-item
           v-for="(item, index) in items"
           :key="index"
         >
-          <v-card
-            class="mx-auto"
-            max-width="374"
+          <v-sheet
+            color="dark"
+            height="100%"
+            tile
+            class="pt-5"
           >
-            <v-img
-              :src="require(`@/assets/images/${item.avatar}`)"
-              height="200px"
-            ></v-img>
-
-            <v-card-title>
-              <div>{{item.name}}</div>
-            </v-card-title>
-            <v-card-text class="text-left body-1">{{item.text}}
-            </v-card-text>
-          </v-card>
-          <!--          <v-row class="text-center"-->
-          <!--                 align="center"-->
-          <!--                 justify="center"-->
-          <!--          >-->
-          <!--            <h3 class="headline">{{item.name}}</h3>-->
-          <!--            <h5 class="mb-5 px-5">{{item.text}}</h5>-->
-
-          <!--            <div class="text-center div-avatar">-->
-          <!--              <img alt="Author" class="mt-5" :src="require(`@/assets/images/${item.avatar}`)"/>-->
-          <!--              &lt;!&ndash;            <h6 class="uppercase mb-1">{{item.name}}</h6>&ndash;&gt;-->
-          <!--              &lt;!&ndash;            <span>{{item.title}}</span>&ndash;&gt;-->
-          <!--            </div>-->
-          <!--          </v-row>-->
+            <v-card
+              class="mx-auto white"
+              max-width="374"
+              height="75%"
+            >
+              <v-img
+                :src="require(`@/assets/images/${item.avatar}`)"
+                height="200px"
+              ></v-img>
+              <div class="white black--text">
+                <v-card-title>
+                  <div>{{item.name}}</div>
+                </v-card-title>
+                <v-card-text class="text-left body-1">{{item.text}}
+                </v-card-text>
+              </div>
+            </v-card>
+          </v-sheet>
         </v-carousel-item>
       </v-carousel>
     </v-row>

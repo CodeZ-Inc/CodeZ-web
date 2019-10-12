@@ -9,7 +9,6 @@
           >
             <v-img
               class="white--text"
-              height="1000px"
               src="../assets/images/bg-product.png"
             >
               <div class="container pt-10">
@@ -21,7 +20,7 @@
                     <v-col
                       v-for="(item, i) in items"
                       :key="i"
-                      cols="3"
+                      cols="12" md="3"
                       class="px-5 pb-5"
                     >
                       <v-card
