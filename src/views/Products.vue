@@ -1,60 +1,54 @@
 <template>
-  <!--  <v-container v-if="fields" class="primary white&#45;&#45;text px-3">-->
-  <v-parallax
-    dark
-    src="../assets/images/home24.jpg"
-    class="pb240 pt240"
-  >
-    <v-row align="center" justify="center">
-      <img alt="Logo" class="image-small mb40 mb-xs-0" src="../assets/images/logo-light.png"/>
-    </v-row>
-    <v-row align="center"
-           justify="center">
-      <br/>
-      <h1 class="display-2 font-weight-thin mb-4">Vuetify.js</h1>
-      <h4 class="subheading">Build your application today!</h4>
-    </v-row>
-  </v-parallax>
-
-  <!--    <section class="background-multiply pt240 pb240 pt-xs-120 pb-xs-120 overlay image-bg parallax">-->
-  <!--      <div class="background-image-holder">-->
-  <!--        <img alt="image" class="background-image" src="../assets/images/home24.jpg"/>-->
-  <!--      </div>-->
-  <!--      <div class="container">-->
-  <!--        <div class="row">-->
-  <!--          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">-->
-  <!--            <img alt="Logo" class="image-small mb40 mb-xs-0" src="../assets/images/logo-light.png"/>-->
-  <!--            <h4 class="mb56 mb-xs-24">-->
-  <!--              Foundry is a digital design collective, tailoring experiences in web and print for clients all around the-->
-  <!--              globe.-->
-  <!--            </h4>-->
-  <!--            <a class="btn btn-lg btn-white mb0" href="#">Make An Enquiry</a>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--        &lt;!&ndash;end of row&ndash;&gt;-->
-  <!--      </div>-->
-  <!--      &lt;!&ndash;end of container&ndash;&gt;-->
-  <!--    </section>-->
-  <!--    <v-row align="center">-->
-  <!--      <v-col cols="12" sm="12" md="5" class="pr-10">-->
-  <!--        <h3 class="heading-3">{{fields.title_product1[0].text}}</h3>-->
-  <!--        <p class="mt-5">{{fields.content_product1[0].text}}</p>-->
-  <!--      </v-col>-->
-  <!--      <v-col class="bg-img my-5">-->
-  <!--      </v-col>-->
-  <!--    </v-row>-->
-  <!--    <v-divider class="accent my-3"/>-->
-  <!--    <v-row class="my-5">-->
-  <!--      <v-col v-for="(feature, index) in fields.feature_cards" :key="index" cols="12" sm="6" md="3">-->
-  <!--        <v-card>-->
-  <!--          <v-card-text class="white&#45;&#45;text">-->
-  <!--            <div class="headline mb-2">{{feature.card_title[0].text}}</div>-->
-  <!--            {{feature.card_content[0].text}}-->
-  <!--          </v-card-text>-->
-  <!--        </v-card>-->
-  <!--      </v-col>-->
-  <!--    </v-row>-->
-  <!--  </v-container>-->
+  <section class="portfolio-pullup">
+    <v-container class="container-collection">
+      <v-row no-gutters class="pb-0">
+        <v-col cols="12" sm="12" md="12">
+          <v-card
+            class="mx-auto"
+            :tile="true"
+          >
+            <v-img
+              class="white--text"
+              height="1000px"
+              src="../assets/images/bg-product.png"
+            >
+              <div class="container pt-10">
+                <v-container class="">
+                  <h4 class="display-1 white--text ml-5 text-center">
+                    Does any of this sound familiar? If yes, this is exactly where we can help.
+                  </h4>
+                  <v-row dense>
+                    <v-col
+                      v-for="(item, i) in items"
+                      :key="i"
+                      cols="3"
+                      class="px-5 pb-5"
+                    >
+                      <v-card
+                        class="half-black white--text elevation-2 pb-12"
+                        height="100%"
+                      >
+                        <div class="d-flex flex-no-wrap justify-space-between">
+                          <div class="ml-2">
+                            <v-card-title
+                              class="subtitle-1 white--text"
+                              v-text="item.title"
+                            ></v-card-title>
+                          </div>
+                        </div>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </div>
+            </v-img>
+          </v-card>
+        </v-col>
+      </v-row>
+      <!--end of row-->
+    </v-container>
+    <!--end of container-->
+  </section>
 </template>
 
 <script>
@@ -62,7 +56,57 @@ export default {
   name: 'Products',
   data () {
     return {
-      fields: null
+      fields: null,
+      items: [
+        {
+          color: '#eeeeee',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'KPI increase in C-level report - improved performance or data quality issue?',
+          artist: 'Foster the People'
+        },
+        {
+          color: '#141e30',
+          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+          title: 'No time to manually create & maintain data quality rules',
+          artist: 'Ellie Goulding'
+        },
+        {
+          color: '#4ecdc4',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'No knowledge of change in underlying data patterns' +
+            ' of the datasets > Inability' +
+            ' to timely retrain machine learning models timely',
+          artist: 'Foster the People'
+        },
+        {
+          color: '#141e30',
+          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+          title: 'No tracking of multi-staged table/attribute level ' +
+            'lineage > No root cause assessment of data issue in aggregate tables.',
+          artist: 'Ellie Goulding'
+        },
+        {
+          color: '#4ecdc4',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Missed invaluable opportunities - We do not know what we do not see!' +
+            ' How to track important trends in the 1000s of attributes in our 100s of datasets?',
+          artist: 'Foster the People'
+        },
+        {
+          color: '#141e30',
+          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+          title: 'No adequate knowledge of details of redundancy in our datasets' +
+            ' & processing pipelines – Inability to optimize',
+          artist: 'Ellie Goulding'
+        },
+        {
+          color: '#4ecdc4',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Data Scientists and Data Analysts not fully equipped' +
+            ' to use the best of all the data assets available',
+          artist: 'Foster the People'
+        }
+      ]
     }
   },
   methods: {
@@ -83,27 +127,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.bg-img {
-  height: 420px;
-  background: black url("../assets/images/collection-3.png") no-repeat;
-  background-size: 100% 100%;
+.container-collection {
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
   @media (max-width: $mobile_width) {
-    height: 225px;
+    padding: 0px;
+  }
+
+  .img-collection {
+    @media (max-width: $mobile_width) {
+      height: 200px;
+    }
+  }
+
+  .half-black {
+    background: black(0.8);
+    border-left: 5px solid white;
   }
 }
 
-.v-card {
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #414345, #232526); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-}
-
-.pb240 {
-  padding-bottom: 240px;
-}
-
-.pt240 {
-  padding-top: 240px;
+section + .portfolio-pullup {
+  padding-top: 0;
+  margin-top: -70px;
+  position: relative;
+  z-index: 20;
 }
 </style>
