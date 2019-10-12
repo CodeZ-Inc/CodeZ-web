@@ -1,7 +1,7 @@
 <template>
   <v-toolbar
     text
-    class="nav-bar nav-bar-custom elevation-0 black--text"
+    class="elevation-0 black--text transparent nav-bar nav-bar-custom"
   >
     <v-toolbar-title v-text="title">
     </v-toolbar-title>
@@ -59,7 +59,9 @@ export default {
   margin-top: 0px;
   z-index: 10;
   width: 100%;
-  background: transparent;
+  border-bottom: 1px #ccc solid !important;
+  /*background: transparent !important;*/
+
 }
 
 .nav-btn {
