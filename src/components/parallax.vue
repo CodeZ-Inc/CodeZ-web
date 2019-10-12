@@ -1,6 +1,6 @@
 <template>
   <section>
-    <v-parallax src="../assets/images/home24.jpg" height="750">
+    <v-parallax src="../assets/images/home24.jpg" height="800">
       <v-layout
         column
         align-center
@@ -11,7 +11,7 @@
             <h2 class="display-4 font-weight-regular">
               CODE Z
             </h2>
-            <h4 class="font-weight-bold">
+            <h4 class="display-1">
               Data Enablement for Enterprises
             </h4>
             <h4 class="headline">

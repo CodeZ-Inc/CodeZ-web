@@ -43,7 +43,7 @@ export default {
 <style scoped lang="scss">
 .bg-img {
   height: 420px;
-  background: black url("../assets/images/collection-single-6.jpg") no-repeat;
+  background: black url("../assets/images/collection-1.png") no-repeat;
   background-size: 95% 100%;
   @media (max-width: $mobile_width) {
     height: 225px;
