@@ -9,16 +9,16 @@ const store = new Vuex.Store({
     drawer: false,
     links: [
       {
-        text: 'Our Products',
+        text: 'Is This You?',
         path: '#products'
       },
       {
-        text: 'Team',
-        path: '#team'
+        text: 'Data Genie',
+        path: '#data-genie'
       },
       {
-        text: 'About Us',
-        path: '#about'
+        text: 'Consulting',
+        path: '#consulting'
       },
       {
         text: 'Contact Us',

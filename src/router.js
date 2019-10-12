@@ -16,8 +16,8 @@ export default new Router({
       component: Parallax
     },
     {
-      path: '/para',
-      name: 'para',
+      path: '/',
+      name: 'home',
       component: Parallax
     },
     // {

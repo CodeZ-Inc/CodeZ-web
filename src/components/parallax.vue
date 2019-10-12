@@ -7,14 +7,18 @@
         justify-center
         class="black--text"
       >
-        <v-container style="max-width: 700px;">
-          <v-row justify="center" align="center" class="text-center">
-            <h2 class="display-4 font-weight-regular">CODE Z</h2>
-            <!--            <img src="../assets/images/logo-dark-0.1.png" alt="Vuetify.js" class="img-responsive1">-->
-            <h3 class="headline black--text text-center">Welcome to Code Z. We are an AI first data solutions
-              engine to
-              meet all your needs for the data driven future.</h3>
-            <br/>
+        <v-container style="max-width: 700px;" class="text-center">
+            <h2 class="display-4 font-weight-regular">
+              CODE Z
+            </h2>
+            <h4 class="font-weight-bold">
+              Data Enablement for Enterprises
+            </h4>
+            <h4 class="headline">
+              Enterprises today collect enormous amounts of data but more data does not
+              necessarily mean more intelligence. We are on a mission to make
+              enterprises derive the best value out of their data assets.
+            </h4>
             <v-btn
               class="mt-12"
               color=""
@@ -24,7 +28,6 @@
             >
               Make an enquiry
             </v-btn>
-          </v-row>
         </v-container>
       </v-layout>
     </v-parallax>
@@ -53,12 +56,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.img-responsive1 {
-
-  @media (max-width: $mobile_width) {
-    width: 100%;
-  }
-}
-
 </style>

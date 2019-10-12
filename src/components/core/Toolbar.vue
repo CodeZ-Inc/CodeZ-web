@@ -3,16 +3,8 @@
     text
     class="nav-bar nav-bar-custom elevation-0 black--text"
   >
-    <!--    <v-img-->
-    <!--      :src="require('@/assets/logo.png')"-->
-    <!--      class="mr-5"-->
-    <!--      contain-->
-    <!--      height="48"-->
-    <!--      width="48"-->
-    <!--      max-width="48"-->
-    <!--      @click="$vuetify.goTo(0)"-->
-    <!--    />-->
-    <v-toolbar-title v-text="title"></v-toolbar-title>
+    <v-toolbar-title v-text="title">
+    </v-toolbar-title>
     <v-spacer/>
     <v-btn
       v-for="(link, i) in links"
