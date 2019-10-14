@@ -56,4 +56,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.v-application .display-4 {
+
+  @media (max-width: $mobile_width) {
+    font-size: 3rem !important;
+  }
+
+}
+
+.v-application .headline {
+ @media (max-width: $mobile_width) {
+    font-size: 1rem !important;
+  }
+}
 </style>

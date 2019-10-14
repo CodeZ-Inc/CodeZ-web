@@ -7,7 +7,7 @@
                :key="index"
         >
           <v-card
-            class="mx-auto"
+            class="mx-auto my-5"
             max-width="344"
           >
             <v-img
@@ -128,5 +128,13 @@ section + .portfolio-pullup {
   margin-top: -100px;
   position: relative;
   z-index: 20;
+}
+
+.v-application .display-1 {
+
+  @media (max-width: $mobile_width) {
+    font-size: 2rem !important;
+  }
+
 }
 </style>
