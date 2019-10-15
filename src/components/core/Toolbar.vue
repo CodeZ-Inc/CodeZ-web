@@ -1,24 +1,31 @@
 <template>
   <v-toolbar
-    text
-    class="elevation-0 black--text transparent nav-bar nav-bar-custom"
+    :absolute="true"
+    flat
+    dense
+    width="100%"
+    class="black--text transparent toolbar"
   >
-    <v-toolbar-title v-text="title">
+    <router-link to="/home">
+     <v-toolbar-title class="black--text">
+      {{title}}
     </v-toolbar-title>
+    </router-link>
     <v-spacer/>
-    <v-btn
-      v-for="(link, i) in links"
-      :key="i"
-      :to="{name: link.path}"
-      class="ml-0 hidden-sm-and-down nav-btn black--text"
-      text
-      @click="onClick($event, item)"
-    >
-      {{ link.text }}
-    </v-btn>
+    <v-toolbar-items>
+      <v-btn
+        text
+        v-for="(link, i) in links"
+        :key="i"
+        :to="{name: link.path}"
+        class="hidden-sm-and-down black--text nav-btn"
+      >
+        {{ link.text }}
+      </v-btn>
+    </v-toolbar-items>
     <v-app-bar-nav-icon
       color="black"
-      class="hidden-md-and-up pt-6"
+      class="hidden-md-and-up"
       @click="toggleDrawer"
     />
   </v-toolbar>
@@ -42,40 +49,18 @@ export default {
   },
 
   methods: {
-    ...mapMutations(['toggleDrawer']),
-    onClick (e, item) {
-      e.stopPropagation()
-
-      if (item.to || !item.href) return
-
-      this.$vuetify.goTo(item.href)
-    }
+    ...mapMutations(['toggleDrawer'])
   }
 }
 </script>
 <style lang="scss" scoped>
-.nav-bar-custom {
-  position: absolute;
-  margin-top: 0px;
-  z-index: 10;
-  width: 100%;
+.toolbar {
   border-bottom: 1px #ccc solid !important;
-  /*background: transparent !important;*/
-
 }
 
 .nav-btn {
   border-left: 1px solid #ccc;
   padding: 0 24px;
-  cursor: pointer;
-  position: relative;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin: 0;
 }
 
 </style>

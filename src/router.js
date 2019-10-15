@@ -17,9 +17,10 @@ export default new Router({
       component: DataGenie
     },
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: Parallax
+      component: Parallax,
+      alias: '/'
     },
     // {
     //   path: '/',
