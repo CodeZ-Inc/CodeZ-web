@@ -18,7 +18,6 @@
       </v-layout>
     </v-parallax>
     <v-card
-      width="60%"
       class="mx-auto mb-10 py-10 card-contact"
     >
       <v-form @submit.prevent="submit">
@@ -165,6 +164,10 @@ export default {
   transition: all .2s ease-out;
   box-shadow: 0 2px 43px -4px rgba(0, 0, 0, .19);
   margin-top: -100px;
+  width: 60%;
+   @media (max-width: $mobile_width) {
+    width: 95%;
+  }
 }
 
 .contact {
