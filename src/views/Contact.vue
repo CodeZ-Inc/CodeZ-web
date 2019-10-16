@@ -1,54 +1,65 @@
 <template>
   <section>
-    <v-parallax src="../assets/images/home24.jpg" height="800">
+    <v-parallax src="../assets/images/home24.jpg" height="400">
       <v-layout
         column
         align-center
         justify-center
         class="black--text"
       >
-        <v-container v-if="fields" class="contact">
-          <v-row align="center">
-            <v-col cols="12" sm="12" md="7" class="mr-10">
-              <v-form @submit.prevent="submit" class="form-contact white">
-                <v-text-field
-                  v-model="name"
-                  color="deep-purple"
-                  class="mb-10"
-                  :error-messages="nameErrors"
-                  label="Full Name"
-                  required
-                  @input="$v.name.$touch()"
-                  @blur="$v.name.$touch()"
-                ></v-text-field>
-                <v-text-field
-                  v-model="email"
-                  color="deep-purple"
-                  :error-messages="emailErrors"
-                  label="E-mail"
-                  required
-                  @input="$v.email.$touch()"
-                  @blur="$v.email.$touch()"
-                ></v-text-field>
-                <v-textarea
-                  v-model="message"
-                  auto-grow
-                  color="deep-purple"
-                  label="Message"
-                  rows="6"
-                ></v-textarea>
-                <v-btn class="my-10" @click="submit" color="secondary" width="200" height="50">Send</v-btn>
-              </v-form>
-            </v-col>
-            <v-col>
-              <h3 v-for="(line, index) in fields.address" :key="index">
-                {{line.text}}
-              </h3>
-            </v-col>
-          </v-row>
+        <v-container v-if="fields" class="container-para text-center pt-0">
+          <h2 class="display-4 font-weight-regular">
+            Contact Us
+          </h2>
+          <h4 class="display-1 mt-6">
+            Data Enablement for Enterprises
+          </h4>
         </v-container>
       </v-layout>
     </v-parallax>
+    <v-card
+      width="60%"
+      class="mx-auto mb-10 py-10 card-contact"
+    >
+      <v-form @submit.prevent="submit">
+        <v-text-field
+          v-model="name"
+          dark
+          autofocus
+          :error-messages="nameErrors"
+          label="Full Name"
+          required
+          @input="$v.name.$touch()"
+          @blur="$v.name.$touch()"
+        ></v-text-field>
+        <v-text-field
+          v-model="email"
+          dark
+          :error-messages="emailErrors"
+          label="E-mail"
+          required
+          @input="$v.email.$touch()"
+          @blur="$v.email.$touch()"
+        ></v-text-field>
+        <v-textarea
+          dark
+          v-model="message"
+          auto-grow
+          label="Message"
+          rows="6"
+        ></v-textarea>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            class="mt-3"
+            @click="submit"
+            color="secondary"
+            width="200"
+            height="50">Send
+          </v-btn>
+        </v-card-actions>
+      </v-form>
+    </v-card>
   </section>
 </template>
 
@@ -100,7 +111,7 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
-      this.email = 'contact@codez.ai'
+      this.email = 'hello@codez.ai'
       setTimeout(() => {
         window.open(`mailto:${this.email}?subject=${this.name}&body=${this.message}`)
       }, 320)
@@ -128,12 +139,41 @@ export default {
 
 <style scoped lang="scss">
 
+.v-application .display-4 {
+
+  @media (max-width: $mobile_width) {
+    font-size: 3rem !important;
+  }
+
+}
+
+.v-application .headline {
+  @media (max-width: $mobile_width) {
+    font-size: 1rem !important;
+  }
+}
+
+.container-para {
+  max-width: 700px;
+  margin-top: -35px;
+}
+
+.card-contact {
+  background-color: rgba(67, 91, 113, .9);
+  padding: 25px 30px 30px;
+  border-radius: 15px;
+  transition: all .2s ease-out;
+  box-shadow: 0 2px 43px -4px rgba(0, 0, 0, .19);
+  margin-top: -100px;
+}
+
 .contact {
-   @media (max-width: $mobile_width) {
+  @media (max-width: $mobile_width) {
     margin-top: 300px !important;
   }
 
 }
+
 .v-application .display-4 {
 
   @media (max-width: $mobile_width) {

@@ -46,10 +46,7 @@ export default {
   },
   methods: {
     contact () {
-      this.email = 'hello@codez.ai'
-      setTimeout(() => {
-        window.open(`mailto:${this.email}`)
-      }, 320)
+      this.$router.push('/contact')
     }
   }
 }

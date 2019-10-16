@@ -6,6 +6,7 @@
     <v-content>
       <router-view/>
     </v-content>
+    <nav-footer/>
   </v-app>
 </template>
 
@@ -16,7 +17,8 @@ export default {
   components: {
     CoreCta: () => import('@/components/core/Cta'),
     CoreDrawer: () => import('@/components/core/Drawer'),
-    CoreToolbar: () => import('@/components/core/Toolbar')
+    CoreToolbar: () => import('@/components/core/Toolbar'),
+    NavFooter: () => import('@/components/NavFooter')
   }
 }
 </script>

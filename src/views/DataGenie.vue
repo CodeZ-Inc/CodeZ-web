@@ -22,9 +22,10 @@
             </h4>
             <v-btn
               class="mt-12"
-              color=""
+              color="white--text"
               dark
               large
+              @click="contact"
             >
               Make an enquiry
             </v-btn>
@@ -43,6 +44,11 @@ export default {
   components: {
     Collection: () => import('@/components/Collection'),
     Consulting: () => import('@/views/Consulting')
+  },
+  methods: {
+    contact () {
+      this.$router.push('/contact')
+    }
   }
 }
 </script>
@@ -58,7 +64,7 @@ export default {
 }
 
 .v-application .headline {
- @media (max-width: $mobile_width) {
+  @media (max-width: $mobile_width) {
     font-size: 1rem !important;
   }
 }

@@ -4,7 +4,6 @@
     <products/>
 <!--    <collection class="mb-12"/>-->
     <testimonial class="mb-12"/>
-    <nav-footer/>
   </div>
 </template>
 
@@ -15,8 +14,7 @@ export default {
   components: {
     Products: () => import('@/views/Products'),
     Parallax: () => import('@/components/parallax'),
-    Testimonial: () => import('@/components/Testimonial'),
-    NavFooter: () => import('@/components/NavFooter')
+    Testimonial: () => import('@/components/Testimonial')
   }
 }
 </script>
