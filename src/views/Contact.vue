@@ -1,6 +1,6 @@
 <template>
   <section>
-    <v-parallax src="../assets/images/home24.jpg" height="400">
+    <v-parallax src="../assets/images/home24.jpg" height="500">
       <v-layout
         column
         align-center
@@ -11,14 +11,15 @@
           <h2 class="display-4 font-weight-regular">
             Contact Us
           </h2>
-          <h4 class="display-1 mt-6">
-            Data Enablement for Enterprises
+          <h4 class="display-1 mt-6" style="font-family: gill sans serif !important;">
+            Get The Best Out Of Your Data!
           </h4>
         </v-container>
       </v-layout>
     </v-parallax>
     <v-card
       class="mx-auto mb-10 py-10 card-contact"
+      max-width="900px"
     >
       <v-form @submit.prevent="submit">
         <v-text-field
@@ -64,14 +65,15 @@
 
 <script>
 import { validationMixin } from 'vuelidate'
-import { maxLength, email } from 'vuelidate/lib/validators'
+import { maxLength, email, required } from 'vuelidate/lib/validators'
+import emailjs from 'emailjs-com'
 
 export default {
   name: 'Contact',
   mixins: [validationMixin],
   validations: {
     name: { maxLength: maxLength(100) },
-    email: { email },
+    email: { email, required },
     message: { maxLength: maxLength(2024) }
   },
 
@@ -96,7 +98,7 @@ export default {
       const errors = []
       if (!this.$v.email.$dirty) return errors
       !this.$v.email.email && errors.push('Must be valid e-mail')
-      // !this.$v.email.required && errors.push('E-mail is required')
+      !this.$v.email.required && errors.push('E-mail is required')
       return errors
     },
     messageErrors () {
@@ -110,15 +112,28 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
-      this.email = 'hello@codez.ai'
-      setTimeout(() => {
-        window.open(`mailto:${this.email}?subject=${this.name}&body=${this.message}`)
-      }, 320)
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        const templateParams = {
+          'reply_to': this.email,
+          'from_name': this.name,
+          'to_name': 'hello@codez.ai; ravianand1988@live.com',
+          'message_html': this.message
+        }
+
+        const serviceId = 'default_service'
+        const templateId = 'template_gwy2Io9X'
+        emailjs.send(serviceId, templateId, templateParams)
+        console.log('mail sent')
+        this.clear()
+      }
     },
     clear () {
       this.$v.$reset()
       this.name = ''
       this.email = ''
+      this.message = ''
     },
     getContent () {
       this.$prismic.client.getSingle('contact')
@@ -158,14 +173,14 @@ export default {
 }
 
 .card-contact {
-  background-color: rgba(67, 91, 113, .9);
+  background-color: rgba(89, 108, 120, .95);//rgba(67, 91, 113, .9);
   padding: 25px 30px 30px;
   border-radius: 15px;
   transition: all .2s ease-out;
   box-shadow: 0 2px 43px -4px rgba(0, 0, 0, .19);
   margin-top: -100px;
   width: 60%;
-   @media (max-width: $mobile_width) {
+  @media (max-width: $mobile_width) {
     width: 95%;
   }
 }

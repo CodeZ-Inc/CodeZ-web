@@ -1,7 +1,7 @@
 <template>
   <div>
     <parallax/>
-    <products/>
+    <products class="pb-12"/>
 <!--    <collection class="mb-12"/>-->
     <testimonial class="mb-12"/>
   </div>

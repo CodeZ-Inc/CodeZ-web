@@ -1,47 +1,65 @@
 <template>
-  <v-container class="testimonial pt-10" style="max-width: 700px;" id="products">
-    <v-row justify="center" align="center" class="px-5 text-center">
-      <v-carousel
-        v-model="model"
-        :show-arrows="false"
-        :cycle="true"
-        class="secondary py-3"
-        progress-color="black"
-        height="650"
-      >
-        <div class="display-1 text-capitalize white--text">
-          Code z unique
-          advantages</div>
-        <v-carousel-item
-          v-for="(item, index) in items"
-          :key="index"
-        >
-          <v-sheet
-            color="dark"
-            height="100%"
-            tile
-            class="pt-5"
-          >
-            <v-card
-              class="mx-auto white"
-              max-width="374"
-              height="75%"
-            >
-              <v-img
-                :src="require(`@/assets/images/${item.avatar}`)"
-                height="200px"
-              ></v-img>
-              <div class="white black--text">
-                <v-card-title>
-                  <div>{{item.name}}</div>
-                </v-card-title>
-                <v-card-text class="text-left body-1">{{item.text}}
-                </v-card-text>
-              </div>
-            </v-card>
-          </v-sheet>
-        </v-carousel-item>
-      </v-carousel>
+  <v-container class="testimonial py-10" id="products"
+               style="max-width: 700px;"
+  >
+    <v-row justify="center"
+           align="center"
+           class="px-5 text-center"
+
+    >
+
+      <div class="display-3">
+        Introducing Data Genie
+      </div>
+      <div class="headline headline-data-1 my-10" style="font-family: gill sans serif !important;">
+        Our first product, Data Genie maximises value of enterprises data assets
+        through a combination of Machine Learning, Automation and Common Sense!
+      </div>
+      <div class="headline headline-data-2" style="font-family: gill sans serif !important;">
+        Our crawlers crawl your entire data infrastructure and collect the important metadata for all the
+        datasets you have. We have three services utilizing and enriching this metadata.
+      </div>
+      <!--      <v-carousel-->
+      <!--        v-model="model"-->
+      <!--        :show-arrows="false"-->
+      <!--        :cycle="true"-->
+      <!--        class="secondary py-3"-->
+      <!--        progress-color="black"-->
+      <!--        height="650"-->
+      <!--      >-->
+      <!--        <div class="display-1 text-capitalize white&#45;&#45;text">-->
+      <!--          Code z unique-->
+      <!--          advantages</div>-->
+      <!--        <v-carousel-item-->
+      <!--          v-for="(item, index) in items"-->
+      <!--          :key="index"-->
+      <!--        >-->
+      <!--          <v-sheet-->
+      <!--            color="dark"-->
+      <!--            height="100%"-->
+      <!--            tile-->
+      <!--            class="pt-5"-->
+      <!--          >-->
+      <!--            <v-card-->
+      <!--              class="mx-auto white"-->
+      <!--              max-width="374"-->
+      <!--              height="75%"-->
+      <!--            >-->
+      <!--              <v-img-->
+      <!--                :src="require(`@/assets/images/${item.avatar}`)"-->
+      <!--                height="200px"-->
+      <!--              ></v-img>-->
+      <!--              <div class="white black&#45;&#45;text">-->
+      <!--                <v-card-title>-->
+      <!--                  <div>{{item.name}}</div>-->
+      <!--                </v-card-title>-->
+      <!--                <v-card-text class="text-left body-1">{{item.text}}-->
+      <!--                </v-card-text>-->
+      <!--              </div>-->
+      <!--            </v-card>-->
+      <!--          </v-sheet>-->
+      <!--        </v-carousel-item>-->
+      <!--      </v-carousel>-->
     </v-row>
   </v-container>
 </template>
@@ -106,6 +124,14 @@ export default {
     @media (max-width: $mobile_width) {
       height: 370px;
     }
+  }
+
+  .headline-data-1 {
+    font-size: 26px !important;
+  }
+
+  .headline-data-2 {
+    font-size: 20px !important;
   }
 }
 </style>

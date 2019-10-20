@@ -1,51 +1,37 @@
 <template>
   <section class="portfolio-pullup">
-    <v-container class="container-collection">
-      <v-row no-gutters class="pb-0">
-        <v-col cols="12" sm="12" md="12">
+    <v-container class="container-collection transparent">
+      <!--      <v-container class="">-->
+      <v-row no-gutters dense>
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+          cols="12" md="4"
+          class=""
+          style="height: 400px;"
+        >
           <v-card
-            class="mx-auto"
-            :tile="true"
+            class="white--text elevation-5 py-12 text-center align-center justify-center px-12"
+            height="100%"
+            width="100%"
+            tile
+            :color="item.color"
           >
-            <v-img
-              class="white--text"
-              src="../assets/images/bg-product.png"
+            <v-img :src="require(`@/assets/images/${item.src}`)"
+                   width="125"
+                   height="125"
+                   class="mx-auto my-auto"
             >
-              <div class="container pt-10">
-                <v-container class="">
-                  <h4 class="display-1 white--text ml-5 text-center">
-                    Does any of this sound familiar? If yes, this is exactly where we can help.
-                  </h4>
-                  <v-row dense>
-                    <v-col
-                      v-for="(item, i) in items"
-                      :key="i"
-                      cols="12" md="3"
-                      class="px-5 pb-5"
-                    >
-                      <v-card
-                        class="half-black white--text elevation-2 pb-12"
-                        height="100%"
-                      >
-                        <div class="d-flex flex-no-wrap justify-space-between">
-                          <div class="ml-2">
-                            <v-card-title
-                              class="subtitle-1 white--text"
-                              v-text="item.title"
-                            ></v-card-title>
-                          </div>
-                        </div>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </div>
             </v-img>
+            <div class="headline my-2">{{item.artist}}</div>
+            <div class="body-1">
+              {{item.title}}
+            </div>
           </v-card>
         </v-col>
       </v-row>
-      <!--end of row-->
     </v-container>
+    <!--     </v-container>-->
     <!--end of container-->
   </section>
 </template>
@@ -58,53 +44,53 @@ export default {
       fields: null,
       items: [
         {
-          color: '#eeeeee',
-          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          color: '#596C78',
+          src: '1-kpi.png',
           title: 'KPI increase in C-level report - improved performance or data quality issue?',
-          artist: 'Foster the People'
+          artist: 'Data quality'
         },
         {
-          color: '#141e30',
-          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+          color: '#BBC4CC',
+          src: '2-no-time.png',
           title: 'No time to manually create & maintain data quality rules',
-          artist: 'Ellie Goulding'
+          artist: 'Data management'
         },
         {
-          color: '#4ecdc4',
-          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          color: '#80898E',
+          src: '3-no-knowledge.png',
           title: 'No knowledge of change in underlying data patterns' +
             ' of the datasets > Inability' +
             ' to timely retrain machine learning models timely',
-          artist: 'Foster the People'
+          artist: 'Data pattern'
         },
         {
-          color: '#141e30',
-          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+          color: '#97A3AB',
+          src: '4-no-tracking.png',
           title: 'No tracking of multi-staged table/attribute level ' +
             'lineage > No root cause assessment of data issue in aggregate tables.',
-          artist: 'Ellie Goulding'
+          artist: 'Multi stage data tracking'
         },
         {
-          color: '#4ecdc4',
-          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          color: '#91A3AD',
+          src: '5-no-options.png',
           title: 'Missed invaluable opportunities - We do not know what we do not see!' +
             ' How to track important trends in the 1000s of attributes in our 100s of datasets?',
-          artist: 'Foster the People'
+          artist: 'Data analytics'
         },
         {
-          color: '#141e30',
-          src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
-          title: 'No adequate knowledge of details of redundancy in our datasets' +
-            ' & processing pipelines – Inability to optimize',
-          artist: 'Ellie Goulding'
-        },
-        {
-          color: '#4ecdc4',
-          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-          title: 'Data Scientists and Data Analysts not fully equipped' +
-            ' to use the best of all the data assets available',
-          artist: 'Foster the People'
+          color: '#667078',
+          src: '6-data-scientist.png',
+          title: 'Data Scientists and Data Analysts not fully equipped to use the best' +
+            ' of all the data assets available. No idea of how to optimize datasets and redundant pipelines.',
+          artist: 'Optimization of datasets'
         }
+        // {
+        //   color: '#4ecdc4',
+        //   src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+        //   title: 'Data Scientists and Data Analysts not fully equipped' +
+        //     ' to use the best of all the data assets available',
+        //   artist: 'Foster the People'
+        // }
       ]
     }
   },
@@ -142,13 +128,13 @@ export default {
 
   .half-black {
     background: black(0.8);
-    border-left: 5px solid white;
+    /*border-left: 5px solid white;*/
   }
 }
 
 section + .portfolio-pullup {
   padding-top: 0;
-  margin-top: -70px;
+  margin-top: -100px;
   position: relative;
   z-index: 20;
 }

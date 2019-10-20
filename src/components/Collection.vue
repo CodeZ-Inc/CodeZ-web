@@ -39,14 +39,16 @@
           </v-card>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col cols="12">
-          <div class="display-1 text-center pt-5">
-            We are working with a couple of leading enterprises for a POC. Please contact us if you are
-            interested in doing a POC with Data Genie.
-          </div>
-        </v-col>
-      </v-row>
+      <v-container style="max-width: 870px;">
+        <v-row>
+          <v-col cols="12">
+            <div class="display-1 text-center pt-5">
+              We are working with a couple of leading enterprises for a POC. Please contact us if you are
+              interested in doing a POC with Data Genie.
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
       <!--end of row-->
     </v-container>
     <!--end of container-->
@@ -62,7 +64,7 @@ export default {
       items: [
         {
           show: false,
-          src: 'collection-1.png',
+          src: 'collection1.jpg',
           title: 'Unsupervised Learning based Data Lineage',
           text: 'Our ‘patent-pending’ algorithm deciphers the complex, multi-staged table/attribute data lineage' +
             '                  across the hundreds of datasets in your enterprise. We do this in a non-intrusive way - no API' +
@@ -71,7 +73,7 @@ export default {
         },
         {
           show: false,
-          src: 'collection-2.png',
+          src: 'collection2.jpg',
           title: 'Data Signature based Data Quality Tracking',
           text: ' Our patent-pending algorithm creates a daily signature for each of your datasets. The data' +
             '                  signature is composed of important descriptive & inferential statistics derived from the dataset' +
@@ -83,7 +85,7 @@ export default {
         },
         {
           show: false,
-          src: 'collection-3.png',
+          src: 'collection3.jpg',
           title: 'Data Recommendation Engine',
           text: 'We perform semantic tagging of your datasets - understand which datasets can be used for' +
             '                  which use cases. We combine this intelligence along with the Data Signature & Data Lineage to' +

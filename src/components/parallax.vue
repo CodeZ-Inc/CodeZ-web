@@ -1,6 +1,8 @@
 <template>
   <section>
-    <v-parallax src="../assets/images/home24.jpg" height="800">
+    <v-parallax
+      src="../assets/images/home24.jpg"
+      height="750">
       <v-layout
         column
         align-center
@@ -8,26 +10,28 @@
         class="black--text pt-0 mt-0"
       >
         <v-container class="container-para text-center pt-0">
-            <h2 class="display-4 font-weight-regular">
-              CODE Z
-            </h2>
-            <h4 class="display-1 mt-6">
-              Data Enablement for Enterprises
-            </h4>
-            <h4 class="headline mt-6">
-              Enterprises today collect enormous amounts of data but more data does not
-              necessarily mean more intelligence. We are on a mission to make
-              enterprises derive the best value out of their data assets.
-            </h4>
-            <v-btn
-              class="mt-12"
-              color="white--text"
-              dark
-              large
-              @click="contact"
-            >
-              Make an enquiry
-            </v-btn>
+          <h2 class="display-4 font-weight-regular">
+            CODE Z
+          </h2>
+          <h4 class="display-1 mt-6" style="font-family: gill sans serif !important;">
+            Get The Best Out Of Your Data!
+          </h4>
+          <h4 class="headline mt-6" style="font-family: gill sans serif !important;">
+            Enterprises today collect enormous variety & volume of data.
+            <span class="font-weight-bold d-block" >
+            We are on a mission to make enterprises derive the best value
+            out of their data assets.
+            </span>
+          </h4>
+          <v-btn
+            class="mt-12"
+            color="white--text"
+            dark
+            large
+            @click="contact"
+          >
+            Make an enquiry
+          </v-btn>
         </v-container>
       </v-layout>
     </v-parallax>
@@ -62,7 +66,7 @@ export default {
 }
 
 .v-application .headline {
- @media (max-width: $mobile_width) {
+  @media (max-width: $mobile_width) {
     font-size: 1rem !important;
   }
 }

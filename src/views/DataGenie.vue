@@ -1,7 +1,7 @@
 <template>
-  <v-container class="px-0 mx-0 py-0 my-0">
+  <div>
     <section>
-      <v-parallax src="../assets/images/home24.jpg" height="800">
+      <v-parallax src="../assets/images/home24.jpg" height="500">
         <v-layout
           column
           align-center
@@ -12,14 +12,17 @@
             <h2 class="display-4 font-weight-regular">
               Data Genie
             </h2>
-            <h4 class="headline mt-6">
-              Our product, Data Genie, enables enterprises to get the best value out of their data assets
-              through a combination of Machine Learning, Automation and Common Sense!
+            <h4 class="display-1 mt-6" style="font-family: gill sans serif !important;">
+              Get The Best Out Of Your Data!
             </h4>
-            <h4 class="headline mt-6">
-              Our crawlers crawl your entire data infrastructure and collect the important metadata for all the
-              datasets you have. We have three services utilizing and enriching this metadata.
-            </h4>
+            <!--            <h4 class="headline mt-6">-->
+            <!--              Our product, Data Genie, enables enterprises to get the best value out of their data assets-->
+            <!--              through a combination of Machine Learning, Automation and Common Sense!-->
+            <!--            </h4>-->
+            <!--            <h4 class="headline mt-6">-->
+            <!--              Our crawlers crawl your entire data infrastructure and collect the important metadata for all the-->
+            <!--              datasets you have. We have three services utilizing and enriching this metadata.-->
+            <!--            </h4>-->
             <v-btn
               class="mt-12"
               color="white--text"
@@ -35,7 +38,7 @@
       <collection class="collection"/>
     </section>
     <consulting/>
-  </v-container>
+  </div>
 </template>
 
 <script>

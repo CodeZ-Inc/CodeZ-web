@@ -9,14 +9,15 @@
         <a href="/">
           <h2 class="display-2 mb-5">Code Z</h2>
         </a>
-        <h5 class="mb-5">An AI first data solutions engine to meet all <br/> your needs for the data driven future
+        <h5 class="mb-5 subtitle-1">
+          Get The Best Out Of Your Data!
           &copy;{{new Date().getFullYear() }}</h5>
-        <div>
-          <v-icon>mdi-twitter</v-icon>
-          <v-icon>mdi-facebook</v-icon>
-          <v-icon>mdi-dribbble</v-icon>
-          <v-icon>mdi-vimeo</v-icon>
-        </div>
+        <!--        <div>-->
+        <!--          <v-icon>mdi-twitter</v-icon>-->
+        <!--          <v-icon>mdi-facebook</v-icon>-->
+        <!--          <v-icon>mdi-dribbble</v-icon>-->
+        <!--          <v-icon>mdi-vimeo</v-icon>-->
+        <!--        </div>-->
       </v-col>
     </v-row>
   </v-footer>

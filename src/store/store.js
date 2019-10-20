@@ -13,7 +13,7 @@ const store = new Vuex.Store({
         path: 'home'
       },
       {
-        text: 'Data Genie',
+        text: 'Our Offerings',
         path: 'dataGenie'
       },
       // {

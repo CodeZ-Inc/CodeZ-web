@@ -5,6 +5,7 @@ import store from './store/store'
 import vuetify from './plugins/vuetify'
 import './plugins/prismic'
 import vuelidate from 'vuelidate'
+import './service/email'
 
 Vue.use(vuelidate)
 
