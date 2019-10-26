@@ -37,7 +37,7 @@
       </v-parallax>
       <collection class="collection"/>
     </section>
-    <consulting/>
+    <consulting id="con"/>
   </div>
 </template>
 

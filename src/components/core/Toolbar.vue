@@ -12,19 +12,55 @@
     </router-link>
     <v-spacer/>
     <v-toolbar-items>
-      <v-btn
-        text
-        v-for="(link, i) in links"
-        :key="i"
-        :to="{name: link.path}"
-        active-class="highlighted"
-        :class="link.path === $route.path ? 'highlighted' : ''"
-        class="hidden-sm-and-down black--text nav-btn"
-        retain-focus-on-click
-        :ripple="false"
-      >
-        {{ link.text }}
-      </v-btn>
+      <div v-for="(link, i) in links" :key="i" class="pt-3">
+        <v-btn
+          v-if="link.path !== 'dataGenie'"
+          text
+          :key="i"
+          :to="{name: link.path}"
+          active-class="highlighted"
+          :class="link.path === $route.path ? 'highlighted' : ''"
+          class="hidden-sm-and-down black--text nav-btn"
+        >
+          {{ link.text }}
+        </v-btn>
+        <v-menu
+          v-if="link.path === 'dataGenie'"
+          v-model="value"
+          :open-on-hover="openOnHover"
+          :close-on-click="closeOnClick"
+          :close-on-content-click="closeOnContentClick"
+          offset-y
+        >
+          <template #activator="{ on }">
+            <v-btn
+              text
+              class="hidden-sm-and-down black--text nav-btn"
+              v-on="on"
+            >
+              Our Offerings
+            </v-btn>
+          </template>
+          <v-list class="black">
+            <v-list-item
+              v-for="(item, index) in items"
+              :key="index"
+              :to="{name: item.link }"
+            >
+              <v-list-item-title class="white--text">
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              href="data-genie#con"
+            >
+              <v-list-item-title class="white--text">
+                Consulting
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </v-toolbar-items>
     <v-app-bar-nav-icon
       color="black"
@@ -51,7 +87,14 @@ import {
 export default {
   data () {
     return {
-      title: 'Code Z'
+      title: 'Code Z',
+      items: [
+        { title: 'Data Genie', link: 'dataGenie' }
+      ],
+      openOnHover: true,
+      value: false,
+      closeOnClick: true,
+      closeOnContentClick: true
     }
   },
   computed: {
